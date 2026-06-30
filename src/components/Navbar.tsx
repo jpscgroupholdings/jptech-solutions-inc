@@ -40,7 +40,9 @@ const Navbar: React.FC = () => {
       }`}
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8">
-        <Logo />
+        <div className="mt-4">
+          <Logo />
+        </div>
 
         <div className="hidden md:flex items-center gap-1">
           {NAV_LINKS.map((link) => (
