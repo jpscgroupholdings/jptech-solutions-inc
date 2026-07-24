@@ -8,99 +8,135 @@ export interface ServiceItem {
 
 export const SERVICES: ServiceItem[] = [
   {
-    id: 'custom-software',
-    title: 'Custom Software Development',
-    description:
-      'Tailored applications engineered to fit your exact business processes, from web and mobile to enterprise-grade systems.',
-    items: [
-      'Web Application Development',
-      'Mobile Application Development',
-      'Enterprise Systems',
-      'Customer Portals',
-      'E-Commerce Platforms',
-      'API Development & Integration',
-      'Database Design & Management',
-    ],
-  },
-  {
-    id: 'business-systems',
-    title: 'Business Systems & Platforms',
-    description:
-      'Operational platforms that centralize and automate the core systems that keep your organization running.',
-    items: [
-      'Human Resource Information Systems (HRIS)',
-      'Payroll & Attendance Systems',
-      'Inventory Management Systems',
-      'Asset Management Platforms',
-      'Customer Relationship Management (CRM)',
-      'Ordering & Delivery Platforms',
-      'Operations Management Systems',
-      'Custom Business Dashboards',
-    ],
-  },
-  {
     id: 'cloud-solutions',
     title: 'Cloud Solutions',
     description:
-      'Secure, scalable cloud infrastructure with managed services that reduce cost and improve reliability.',
+      'Build your business on a reliable, secure, and scalable cloud platform.',
     items: [
       'Cloud Migration',
       'Cloud Infrastructure Setup',
+      'Multi-Cloud Solutions (Alibaba Cloud, AWS, Google Cloud)',
+      'Cloud Backup & Disaster Recovery',
+      'Virtual Servers',
+      'Database Hosting',
+      'Storage Solutions',
+      'CDN & Security Services',
+      'Cloud Cost Optimization',
       'Managed Cloud Services',
-      'Data Backup & Disaster Recovery',
-      'Cloud Security Solutions',
-      'Virtual Servers & Hosting',
-      'SaaS Deployment & Management',
     ],
-    extra: {
-      label: 'Benefits',
-      values: [
-        'Reduced IT Costs',
-        'Improved Reliability',
-        'Enhanced Security',
-        'Business Continuity',
-        'Scalable Infrastructure',
-      ],
-    },
   },
   {
-    id: 'ai-solutions',
-    title: 'Artificial Intelligence Solutions',
+    id: 'custom-software',
+    title: 'Custom Software Development',
     description:
-      'Practical AI that automates workflows, accelerates decisions, and elevates the customer experience.',
+      'Transform your business processes with software designed specifically for your operations.',
     items: [
-      'AI Chatbots & Virtual Assistants',
-      'Business Process Automation',
-      'AI-Powered Customer Support',
-      'Document Processing & OCR',
+      'Enterprise Systems',
+      'ERP Solutions',
+      'HRIS',
+      'CRM Systems',
+      'Inventory & Asset Management',
+      'Accounting & Finance Systems',
+      'Procurement Systems',
+      'Booking & Reservation Systems',
+      'Workflow Automation',
+      'API Integration',
+    ],
+  },
+  {
+    id: 'mobile-app',
+    title: 'Mobile App Development',
+    description:
+      'Deliver exceptional customer experiences through powerful mobile applications. We develop native and cross-platform applications.',
+    items: [
+      'Android',
+      'iOS',
+      'Customer Applications',
+      'Employee Applications',
+      'Delivery Applications',
+      'Loyalty & Rewards Apps',
+      'E-commerce Apps',
+      'Internal Business Apps',
+    ],
+  },
+  {
+    id: 'web-development',
+    title: 'Web Development',
+    description:
+      'Create modern websites that represent your brand and generate business opportunities.',
+    items: [
+      'Corporate Websites',
+      'E-Commerce Websites',
+      'Online Ordering Platforms',
+      'Customer Portals',
+      'Booking Systems',
+      'Membership Portals',
+      'Landing Pages',
+      'CMS Websites',
+    ],
+  },
+  {
+    id: 'business-platforms',
+    title: 'Business Platforms',
+    description:
+      'Digitize your operations using intelligent business platforms.',
+    items: [
+      'HR Platforms',
+      'Sales Platforms',
+      'Customer Service Platforms',
+      'Procurement Platforms',
+      'Operations Management',
+      'Logistics Platforms',
+      'Learning Management Systems (LMS)',
+      'Vendor Portals',
+      'Employee Self-Service Portals',
+    ],
+  },
+  {
+    id: 'ai-automation',
+    title: 'AI & Business Automation',
+    description:
+      'Leverage Artificial Intelligence to improve productivity and customer experience.',
+    items: [
+      'AI Chatbots',
+      'Customer Support Automation',
+      'Workflow Automation',
+      'Document Processing',
+      'AI Knowledge Base',
+      'OCR Solutions',
       'Predictive Analytics',
-      'Intelligent Reporting',
-      'Knowledge Management Systems',
-      'AI Integration for Existing Applications',
+      'Business Intelligence Dashboards',
     ],
-    extra: {
-      label: 'Business Impact',
-      values: [
-        'Increased Efficiency',
-        'Faster Decision-Making',
-        'Improved Customer Experience',
-        'Reduced Operational Costs',
-        'Enhanced Productivity',
-      ],
-    },
   },
   {
-    id: 'it-infrastructure',
-    title: 'IT Infrastructure & Managed Services',
+    id: 'cybersecurity',
+    title: 'Cybersecurity & Infrastructure',
     description:
-      'End-to-end IT management that keeps your systems secure, monitored, and continuously operational.',
+      'Protect your business with enterprise-grade security solutions.',
     items: [
-      'Network Setup & Management',
+      'Firewall Solutions',
+      'Endpoint Security',
+      'Email Security',
+      'Identity & Access Management',
+      'Vulnerability Assessment',
+      'Security Monitoring',
+      'Network Security',
+      'Disaster Recovery Planning',
+    ],
+  },
+  {
+    id: 'managed-it',
+    title: 'Managed IT Services',
+    description:
+      'Focus on growing your business while we manage your technology.',
+    items: [
+      'IT Outsourcing',
+      'Remote IT Support',
+      'Help Desk Services',
+      'Infrastructure Monitoring',
       'Server Administration',
-      'IT Support & Helpdesk',
-      'Cybersecurity Solutions',
-      'System Monitoring',
-      'Hardware & Software Procurement',
+      'Network Management',
+      'Software Maintenance',
       'Preventive Maintenance',
     ],
   },
@@ -113,43 +149,45 @@ export interface FeatureItem {
 
 export const WHY_CHOOSE_US: FeatureItem[] = [
   {
-    title: 'Industry-Focused Expertise',
+    title: 'Business-Focused Technology',
     description:
-      'Deep domain knowledge across multiple sectors lets us build solutions aligned with your operational realities.',
+      'We develop solutions that solve real business challenges—not just software.',
   },
   {
-    title: 'End-to-End Technology Partner',
+    title: 'End-to-End Services',
     description:
-      'From strategy and design to deployment and ongoing support, we manage the full technology lifecycle.',
+      'From consultation and planning to development, deployment, and ongoing support.',
   },
   {
     title: 'Scalable Solutions',
     description:
-      'Architectures engineered to grow with your business, handling increasing demand without disruption.',
+      'Technology designed to grow with your business.',
   },
   {
-    title: 'Security & Reliability',
+    title: 'Enterprise Security',
     description:
-      'Enterprise-grade security practices and resilient infrastructure protect your data and ensure uptime.',
+      'Built with industry best practices for security, reliability, and compliance.',
   },
   {
-    title: 'Innovation-Driven Approach',
+    title: 'Dedicated Support',
     description:
-      'We apply emerging technologies pragmatically to deliver measurable, lasting business value.',
+      'Our experienced team provides responsive technical support and continuous system improvements.',
   },
 ];
 
 export const INDUSTRIES: string[] = [
+  'Financial Technology (FinTech)',
   'Retail & E-Commerce',
   'Food & Beverage',
   'Hospitality',
-  'Manufacturing',
-  'Distribution & Logistics',
-  'Human Resources',
-  'Professional Services',
   'Healthcare',
+  'Logistics & Supply Chain',
+  'Manufacturing',
   'Education',
-  'Corporate Enterprises',
+  'Professional Services',
+  'Government',
+  'BPO & Contact Centers',
+  'Real Estate',
 ];
 
 export interface ProcessStep {
@@ -161,33 +199,51 @@ export interface ProcessStep {
 export const PROCESS_STEPS: ProcessStep[] = [
   {
     step: '01',
-    title: 'Discovery & Consultation',
+    title: 'Consultation & Discovery',
     description:
-      'We analyze your goals, challenges, and requirements to define a clear technology roadmap.',
+      'We learn about your business goals, challenges, and requirements.',
   },
   {
     step: '02',
-    title: 'Solution Design',
+    title: 'Solution Planning',
     description:
-      'Our architects design scalable, secure solutions tailored to your operational needs.',
+      'We design a tailored technology roadmap aligned with your objectives.',
   },
   {
     step: '03',
-    title: 'Development & Implementation',
+    title: 'UI/UX Design',
     description:
-      'We build with proven engineering practices, transparent milestones, and rigorous quality.',
+      'We create intuitive, user-centered designs that enhance the experience.',
   },
   {
     step: '04',
-    title: 'Testing & Deployment',
+    title: 'System Development',
     description:
-      'Comprehensive testing ensures reliability before a smooth, low-risk production rollout.',
+      'We build your solution using proven engineering practices and modern technologies.',
   },
   {
     step: '05',
-    title: 'Support & Optimization',
+    title: 'Testing & Quality Assurance',
     description:
-      'Ongoing monitoring, support, and refinement keep your solution performing at its best.',
+      'Rigorous testing ensures reliability, performance, and security.',
+  },
+  {
+    step: '06',
+    title: 'Deployment',
+    description:
+      'Smooth, low-risk production rollout with minimal disruption to your operations.',
+  },
+  {
+    step: '07',
+    title: 'User Training',
+    description:
+      'Comprehensive training to ensure your team can use the solution effectively.',
+  },
+  {
+    step: '08',
+    title: 'Ongoing Support & Maintenance',
+    description:
+      'Continuous monitoring, support, and improvements to keep your system at its best.',
   },
 ];
 
@@ -204,3 +260,107 @@ export const HERO_IMAGE =
 
 export const BOOKING_URL =
   'https://famous.ai/api/crm/6a38af8d8af6d3bdeee26bae/calendar/public?calendarId=185b8b31-64a7-40e1-8c55-3c3b94ccdfe6&view=booking';
+
+export const CRM_API_URL =
+  'https://famous.ai/api/crm/6a38af8d8af6d3bdeee26bae/subscribe';
+
+export const COMPANY = {
+  name: 'JP Technology Solutions Inc.',
+  shortName: 'JP Technology Solutions',
+  abbreviation: 'JP Technology',
+  tagline:
+    'Empowering businesses through innovative technology solutions that drive sustainable growth.',
+};
+
+export const CONTACT = {
+  email: 'info@jptechsolutions.com',
+  phone: '+63 912 3456 789',
+  address: 'Century Spire, Makati City, Philippines',
+};
+
+export interface SocialLink {
+  label: string;
+  href: string;
+}
+
+export const SOCIAL_LINKS: SocialLink[] = [
+  { label: 'LinkedIn', href: '#' },
+  { label: 'Twitter', href: '#' },
+  { label: 'Facebook', href: '#' },
+  { label: 'Email', href: `mailto:${CONTACT.email}` },
+];
+
+export interface LegalSection {
+  heading: string;
+  body: string;
+}
+
+export const PRIVACY_POLICY: LegalSection[] = [
+  {
+    heading: 'Information We Collect',
+    body: 'We collect information you provide directly, such as your name, email address, phone number, and company name when you fill out our contact form or book a consultation. We may also collect usage data such as your IP address, browser type, and pages visited through standard analytics tools.',
+  },
+  {
+    heading: 'How We Use Your Information',
+    body: 'We use your information to respond to inquiries, schedule consultations, provide our services, send relevant updates about your projects, and improve our website and offerings. We do not sell your personal data to third parties.',
+  },
+  {
+    heading: 'Data Storage & Security',
+    body: 'Your data is stored securely using industry-standard practices. We use encrypted connections and reputable third-party service providers to manage and protect your information. We retain your data only as long as necessary to fulfill the purposes outlined in this policy.',
+  },
+  {
+    heading: 'Third-Party Services',
+    body: 'We may use third-party services (such as CRM platforms, analytics providers, and cloud hosting) to support our operations. These providers are contractually obligated to protect your data and use it only for the services they perform on our behalf.',
+  },
+  {
+    heading: 'Cookies',
+    body: 'Our website may use cookies to enhance your browsing experience and analyze site traffic. You can control cookie preferences through your browser settings.',
+  },
+  {
+    heading: 'Your Rights',
+    body: 'You have the right to access, update, or delete your personal information at any time. To make a request, contact us at the email address listed below. We will respond within a reasonable timeframe.',
+  },
+  {
+    heading: 'Contact',
+    body: `For privacy-related questions or requests, reach us at ${CONTACT.email}.`,
+  },
+];
+
+export const TERMS_OF_SERVICE: LegalSection[] = [
+  {
+    heading: 'Acceptance of Terms',
+    body: `By accessing and using the ${COMPANY.shortName} website, you agree to be bound by these Terms of Service. If you do not agree, please do not use our website.`,
+  },
+  {
+    heading: 'Services',
+    body: `${COMPANY.shortName} provides technology consulting, software development, cloud solutions, and related IT services. All engagements are subject to separate agreements or statements of work that define scope, deliverables, and pricing.`,
+  },
+  {
+    heading: 'Intellectual Property',
+    body: 'All content on this website—including text, graphics, logos, and images—is the property of JP Technology Solutions Inc. and is protected by applicable intellectual property laws. You may not reproduce, distribute, or modify any content without our written permission.',
+  },
+  {
+    heading: 'Client Obligations',
+    body: 'Clients are responsible for providing accurate and timely information necessary for project delivery. Delays caused by incomplete or inaccurate information may affect project timelines and costs.',
+  },
+  {
+    heading: 'Limitation of Liability',
+    body: 'To the maximum extent permitted by law, JP Technology Solutions Inc. shall not be liable for any indirect, incidental, or consequential damages arising from the use of our website or services. Our total liability is limited to the fees paid for the specific service in question.',
+  },
+  {
+    heading: 'Confidentiality',
+    body: 'We treat all client information and project details as confidential. Both parties agree not to disclose proprietary information shared during the course of an engagement without prior written consent.',
+  },
+  {
+    heading: 'Changes to Terms',
+    body: 'We reserve the right to update these Terms of Service at any time. Changes will be posted on this page with an updated effective date. Continued use of the website after changes constitutes acceptance of the revised terms.',
+  },
+  {
+    heading: 'Governing Law',
+    body: 'These terms are governed by the laws of the Republic of the Philippines. Any disputes shall be resolved in the appropriate courts of Makati City.',
+  },
+  {
+    heading: 'Contact',
+    body: `For questions regarding these terms, contact us at ${CONTACT.email}.`,
+  },
+];

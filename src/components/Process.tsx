@@ -15,7 +15,7 @@ const Process: React.FC = () => {
 
         <div className="relative mt-16">
           <div className="absolute left-0 right-0 top-6 hidden h-px bg-slate-200 dark:bg-slate-800 lg:block" />
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {PROCESS_STEPS.map((step, i) => (
               <Reveal key={step.step} delay={i * 90} className="relative">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-blue-600 bg-white dark:bg-slate-950 text-sm font-bold text-blue-600">

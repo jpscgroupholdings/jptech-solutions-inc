@@ -1,6 +1,14 @@
 import React from 'react';
 import { Linkedin, Twitter, Facebook, Mail } from 'lucide-react';
-import { SERVICES, INDUSTRIES } from '@/data/siteContent';
+import { SERVICES, INDUSTRIES, CONTACT, COMPANY, SOCIAL_LINKS } from '@/data/siteContent';
+import { Link } from 'react-router-dom';
+
+const SOCIAL_ICONS: Record<string, React.FC<{ className?: string }>> = {
+  LinkedIn: Linkedin,
+  Twitter: Twitter,
+  Facebook: Facebook,
+  Email: Mail,
+};
 
 const Footer: React.FC = () => {
   const year = new Date().getFullYear();
@@ -9,28 +17,30 @@ const Footer: React.FC = () => {
       <div className="mx-auto max-w-7xl px-5 sm:px-8 py-16">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <div className="flex items-center gap-2.5">
-              <span className="flex h-9 w-9 items-center justify-center rounded-md bg-blue-600 text-white font-bold text-sm">JP</span>
-              <span className="flex flex-col leading-none">
-                <span className="text-[15px] font-semibold text-white">JP Technology</span>
-                <span className="text-[11px] font-medium text-slate-500 tracking-wide">SOLUTIONS INC.</span>
-              </span>
-            </div>
+            <Link to="/" aria-label={`${COMPANY.shortName} home`}>
+              <img
+                src="/jptechlogo-nobg.png"
+                alt={COMPANY.name}
+                className="h-32 w-32"
+              />
+            </Link>
             <p className="mt-5 max-w-xs text-sm leading-relaxed">
-              Empowering businesses through innovative technology solutions that drive sustainable
-              growth.
+              {COMPANY.tagline}
             </p>
             <div className="mt-6 flex gap-3">
-              {[Linkedin, Twitter, Facebook, Mail].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  aria-label="Social link"
-                  className="flex h-9 w-9 items-center justify-center rounded-md border border-slate-800 text-slate-400 hover:border-blue-600 hover:text-blue-500 transition-colors"
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
+              {SOCIAL_LINKS.map(({ label, href }) => {
+                const Icon = SOCIAL_ICONS[label] ?? Mail;
+                return (
+                  <a
+                    key={label}
+                    href={href}
+                    aria-label={label}
+                    className="flex h-9 w-9 items-center justify-center rounded-md border border-slate-800 text-slate-400 hover:border-blue-600 hover:text-blue-500 transition-colors"
+                  >
+                    <Icon className="h-4 w-4" />
+                  </a>
+                );
+              })}
             </div>
           </div>
 
@@ -59,9 +69,9 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-sm font-semibold text-white">Contact</h4>
             <ul className="mt-4 space-y-2.5 text-sm">
-              <li>info@jptechsolutions.com</li>
-              <li>+1 (000) 000-0000</li>
-              <li>Business District, Suite 100</li>
+              <li>{CONTACT.email}</li>
+              <li>{CONTACT.phone}</li>
+              <li>{CONTACT.address}</li>
               <li className="pt-2">
                 <a href="#contact" className="inline-flex items-center rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700 transition-colors">
                   Book a Consultation
@@ -72,10 +82,10 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-slate-800 pt-8 sm:flex-row">
-          <p className="text-xs text-slate-500">© {year} JP Technology Solutions Inc. All rights reserved.</p>
+          <p className="text-xs text-slate-500">© {year} {COMPANY.name}. All rights reserved.</p>
           <div className="flex gap-6 text-xs text-slate-500">
-            <a href="#" className="hover:text-slate-300 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-slate-300 transition-colors">Terms of Service</a>
+            <Link to="/privacy-policy" className="hover:text-slate-300 transition-colors">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="hover:text-slate-300 transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

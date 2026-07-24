@@ -9,7 +9,7 @@ const WhyChooseUs: React.FC = () => {
     <section id="why-us" className="bg-white dark:bg-slate-950 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeader
-          eyebrow="Why Choose Us"
+          eyebrow="Why Choose JP Technology Solutions?"
           title="A Partner Built for the Long Term"
           description="We combine technical depth with a partnership mindset to deliver solutions that endure."
         />

@@ -1,13 +1,13 @@
-import React from 'react';
-import Navbar from './Navbar';
-import Hero from './Hero';
-import Services from './Services';
-import WhyChooseUs from './WhyChooseUs';
-import Industries from './Industries';
-import Mission from './Mission';
-import Process from './Process';
-import CTASection from './CTASection';
-import Footer from './Footer';
+import React from "react";
+import Navbar from "./Navbar";
+import Hero from "./Hero";
+import Services from "./Services";
+import WhyChooseUs from "./WhyChooseUs";
+import Industries from "./Industries";
+import Mission from "./Mission";
+import Process from "./Process";
+import CTASection from "./CTASection";
+import Footer from "./Footer";
 
 const AppLayout: React.FC = () => {
   return (
@@ -16,8 +16,8 @@ const AppLayout: React.FC = () => {
       <main>
         <Hero />
         <Services />
-        <WhyChooseUs />
         <Industries />
+        <WhyChooseUs />
         <Mission />
         <Process />
         <CTASection />

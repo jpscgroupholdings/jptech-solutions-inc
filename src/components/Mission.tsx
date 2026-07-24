@@ -9,8 +9,7 @@ const Mission: React.FC = () => {
         <Reveal>
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-400">Our Mission</p>
           <p className="mt-8 text-2xl font-semibold leading-snug text-white sm:text-3xl lg:text-[2.2rem] lg:leading-[1.3]">
-            To empower organizations through innovative technology solutions that simplify
-            operations, enhance productivity, and drive sustainable business growth.
+            Innovative Solutions. Reliable Technology. Sustainable Growth.
           </p>
           <div className="mx-auto mt-10 h-px w-24 bg-blue-500/60" />
         </Reveal>

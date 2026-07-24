@@ -10,7 +10,7 @@ const Services: React.FC = () => {
     <section id="services" className="bg-slate-50 dark:bg-slate-900/40 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeader
-          eyebrow="What We Do"
+          eyebrow="Our Services"
           title="Comprehensive Technology Services"
           description="A full spectrum of capabilities designed to support your organization across its entire digital journey."
         />

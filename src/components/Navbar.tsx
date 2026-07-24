@@ -39,8 +39,8 @@ const Navbar: React.FC = () => {
           : "bg-transparent border-b border-transparent"
       }`}
     >
-      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8">
-        <div className="mt-4">
+      <nav className="mx-auto flex h-24 max-w-7xl items-center justify-between px-5 sm:px-8">
+        <div className="">
           <Logo />
         </div>
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, Mail, Phone, Building2, CheckCircle2, CalendarClock } from 'lucide-react';
 import Reveal from './Reveal';
-import { BOOKING_URL } from '@/data/siteContent';
+import { BOOKING_URL, CONTACT, CRM_API_URL } from '@/data/siteContent';
 
 const CTASection: React.FC = () => {
   const [name, setName] = useState('');
@@ -23,7 +23,7 @@ const CTASection: React.FC = () => {
     }
     setSubmitting(true);
     try {
-      await fetch('https://famous.ai/api/crm/6a38af8d8af6d3bdeee26bae/subscribe', {
+      await fetch(CRM_API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -50,17 +50,17 @@ const CTASection: React.FC = () => {
           <Reveal>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-600">Get in Touch</p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
-              Let's Build the Future Together
+              Let's Build Your Digital Future
             </h2>
             <p className="mt-5 text-base leading-relaxed text-slate-600 dark:text-slate-300">
-              Whether you need a custom business system, cloud infrastructure, AI-powered
-              automation, or complete digital transformation services, JP Technology Solutions
-              Inc. is ready to help your organization achieve its technology goals.
+              Whether you're migrating to the cloud, developing a custom business platform,
+              launching a mobile application, or modernizing your IT infrastructure, JP
+              Technology Solutions is your trusted technology partner.
             </p>
             <div className="mt-8 space-y-3">
               {[
-                'Transforming Ideas into Intelligent Solutions.',
-                'Building Technology That Drives Business Growth.',
+                'Innovative Solutions. Reliable Technology. Sustainable Growth.',
+                'Technology tailored for startups, SMEs, and enterprises.',
               ].map((t) => (
                 <div key={t} className="flex items-center gap-3 text-sm font-medium text-slate-800 dark:text-slate-200">
                   <CheckCircle2 className="h-5 w-5 text-blue-600" />
@@ -68,21 +68,10 @@ const CTASection: React.FC = () => {
                 </div>
               ))}
             </div>
-            <div className="mt-8">
-              <a
-                href={BOOKING_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-md bg-blue-600 px-6 py-3.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors"
-              >
-                <CalendarClock className="h-4 w-4" />
-                Book a Time
-              </a>
-            </div>
             <div className="mt-10 space-y-4 border-t border-slate-200 dark:border-slate-800 pt-8 text-sm text-slate-600 dark:text-slate-400">
-              <p className="flex items-center gap-3"><Mail className="h-4 w-4 text-blue-600" /> info@jptechsolutions.com</p>
-              <p className="flex items-center gap-3"><Phone className="h-4 w-4 text-blue-600" /> +1 (000) 000-0000</p>
-              <p className="flex items-center gap-3"><Building2 className="h-4 w-4 text-blue-600" /> Business District, Suite 100</p>
+              <p className="flex items-center gap-3"><Mail className="h-4 w-4 text-blue-600" /> {CONTACT.email}</p>
+              <p className="flex items-center gap-3"><Phone className="h-4 w-4 text-blue-600" /> {CONTACT.phone}</p>
+              <p className="flex items-center gap-3"><Building2 className="h-4 w-4 text-blue-600" /> {CONTACT.address}</p>
             </div>
           </Reveal>
 

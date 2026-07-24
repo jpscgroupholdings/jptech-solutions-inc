@@ -19,27 +19,23 @@ const Hero: React.FC = () => {
             Enterprise Technology Partner
           </span>
           <h1 className="mt-6 text-4xl font-bold leading-[1.1] tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-[3.4rem]">
-            Empowering Businesses Through Technology
+            Technology That Powers Business Growth
           </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-600 dark:text-slate-300 sm:text-lg">
-            JP Technology Solutions Inc. delivers innovative digital solutions that help
-            organizations streamline operations, improve productivity, and accelerate growth.
-            From custom software and cloud technologies to AI-powered solutions and enterprise
-            platforms, we provide the tools businesses need to succeed.
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-600 dark:text-slate-300 sm:text-lg text-justify">
+            At <span className='text-black font-bold'>JP Technology Solutions</span>, we help businesses accelerate digital transformation
+            through <span className='italic text-blue-600'>cloud infrastructure</span>, <span className='italic text-blue-600'>custom software development</span>, <span className='italic text-blue-600'>enterprise platforms</span>,
+            and managed <span className='italic text-blue-600'>IT services</span>. We build secure, scalable, and innovative technology
+            solutions that improve efficiency, automate operations, and support long-term
+            business growth.
+          </p>
+          <p className="mt-3 max-w-xl text-base leading-relaxed text-slate-500 dark:text-slate-400">
+            Whether you're a startup, SME, or enterprise, we deliver technology tailored to
+            your business needs.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a
-              href={BOOKING_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center gap-2 rounded-md bg-blue-600 px-6 py-3.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors"
-            >
-              <CalendarClock className="h-4 w-4" />
-              Book a Time
-            </a>
-            <a
               href="#contact"
-              className="group inline-flex items-center justify-center gap-2 rounded-md border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-6 py-3.5 text-sm font-semibold text-slate-800 dark:text-slate-100 hover:border-slate-400 dark:hover:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+              className="group inline-flex items-center justify-center gap-2 rounded-md text-white bg-blue-600 dark:bg-blue-900 px-6 py-3.5 text-sm font-semibold dark:text-slate-100 dark:hover:border-slate-600 hover:bg-blue-700 dark:hover:bg-blue-800 transition-colors shadow-sm"
             >
               Book a Consultation
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
