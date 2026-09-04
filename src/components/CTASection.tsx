@@ -1,134 +1,203 @@
-import React, { useState } from 'react';
-import { ArrowRight, Mail, Phone, Building2, CheckCircle2, CalendarClock } from 'lucide-react';
-import Reveal from './Reveal';
-import { BOOKING_URL, CONTACT, CRM_API_URL } from '@/data/siteContent';
+import React, { useState } from "react";
+import { ArrowUpRight, Clock, MapPin, Phone } from "lucide-react";
+import Reveal from "./Reveal";
+import { CONTACT } from "@/data/siteContent";
 
 const CTASection: React.FC = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [company, setCompany] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [company, setCompany] = useState("");
+  const [message, setMessage] = useState("");
   const [smsOptIn, setSmsOptIn] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [done, setDone] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError('');
+    setError("");
     if (!email || !/\S+@\S+\.\S+/.test(email)) {
-      setError('Please enter a valid email address.');
+      setError("Please enter a valid email address.");
       return;
     }
     setSubmitting(true);
     try {
-      await fetch(CRM_API_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email,
-          name: name || undefined,
-          phone: phone || undefined,
-          sms_opt_in: smsOptIn === true,
-          source: 'contact-form',
-          tags: ['contact', 'consultation-request', company ? `company:${company}` : 'lead'],
-        }),
-      });
+      await fetch(
+        "https://famous.ai/api/crm/6a38af8d8af6d3bdeee26bae/subscribe",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            email,
+            name: name || undefined,
+            phone: phone || undefined,
+            sms_opt_in: smsOptIn === true,
+            source: "contact-form",
+            tags: [
+              "contact",
+              "consultation-request",
+              company ? `company:${company}` : "lead",
+            ],
+          }),
+        },
+      );
       setDone(true);
     } catch {
-      setError('Something went wrong. Please try again.');
+      setError("Something went wrong. Please try again.");
     } finally {
       setSubmitting(false);
     }
   };
 
   return (
-    <section id="contact" className="bg-slate-50 dark:bg-slate-900/40 py-20 sm:py-28">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-          <Reveal>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-600">Get in Touch</p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
-              Let's Build Your Digital Future
-            </h2>
-            <p className="mt-5 text-base leading-relaxed text-slate-600 dark:text-slate-300">
-              Whether you're migrating to the cloud, developing a custom business platform,
-              launching a mobile application, or modernizing your IT infrastructure, JP
-              Technology Solutions is your trusted technology partner.
-            </p>
-            <div className="mt-8 space-y-3">
-              {[
-                'Innovative Solutions. Reliable Technology. Sustainable Growth.',
-                'Technology tailored for startups, SMEs, and enterprises.',
-              ].map((t) => (
-                <div key={t} className="flex items-center gap-3 text-sm font-medium text-slate-800 dark:text-slate-200">
-                  <CheckCircle2 className="h-5 w-5 text-blue-600" />
-                  {t}
+    <section id="contact" className="relative py-24 sm:py-40">
+      <div className="section-content px-6 sm:px-10 lg:px-16">
+        <Reveal>
+          <p className="micro-label mb-6">04 — Contact</p>
+          <h2 className="display-lg text-foreground max-w-3xl">
+            Let's build
+            <br />
+            <span className="text-gray-300 dark:text-gray-700">something.</span>
+          </h2>
+          <p className="mt-6 text-base text-gray-500 leading-relaxed max-w-xl">
+            Book a free 30-minute consultation. We'll discuss your goals,
+            current systems, and challenges — then prepare a tailored proposal
+            within a week.
+          </p>
+        </Reveal>
+
+        <div className="mt-16 sm:mt-24 grid gap-16 lg:grid-cols-5">
+          <Reveal className="lg:col-span-2">
+            <div className="space-y-10">
+              <div>
+                <div className="flex items-center gap-2.5 mb-3">
+                  <Clock className="h-4 w-4 text-gray-400" />
+                  <p className="micro-label">Response Time</p>
                 </div>
-              ))}
-            </div>
-            <div className="mt-10 space-y-4 border-t border-slate-200 dark:border-slate-800 pt-8 text-sm text-slate-600 dark:text-slate-400">
-              <p className="flex items-center gap-3"><Mail className="h-4 w-4 text-blue-600" /> {CONTACT.email}</p>
-              <p className="flex items-center gap-3"><Phone className="h-4 w-4 text-blue-600" /> {CONTACT.phone}</p>
-              <p className="flex items-center gap-3"><Building2 className="h-4 w-4 text-blue-600" /> {CONTACT.address}</p>
+                <p className="text-base text-foreground">
+                  Within 24 hours, guaranteed.
+                </p>
+              </div>
+
+              <div>
+                <div className="flex items-center gap-2.5 mb-3">
+                  <MapPin className="h-4 w-4 text-gray-400" />
+                  <p className="micro-label">Office</p>
+                </div>
+                <p className="text-base text-foreground">{CONTACT.address}</p>
+              </div>
+
+              <div>
+                <div className="flex items-center gap-2.5 mb-3">
+                  <Phone className="h-4 w-4 text-gray-400" />
+                  <p className="micro-label">Direct</p>
+                </div>
+                <a
+                  href={`mailto:${CONTACT.email}`}
+                  className="text-base text-foreground underline decoration-gray-200 underline-offset-4 hover:decoration-foreground transition-colors duration-200 block"
+                >
+                  {CONTACT.email}
+                </a>
+                <p className="text-base text-foreground mt-1">
+                  {CONTACT.phone}
+                </p>
+              </div>
+
+              <div className="pt-6 border-t border-gray-200">
+                <p className="micro-label mb-2">Hours</p>
+                <p className="text-sm text-gray-500">
+                  Mon–Fri, 9:00am–6:00pm PHT
+                </p>
+                <p className="text-sm text-gray-500 mt-1">
+                  Sat, 10:00am–2:00pm (by appointment)
+                </p>
+              </div>
+
+              <div className="p-5 rounded-lg border border-gray-200 bg-gray-50 dark:bg-gray-50">
+                <p className="font-mono text-[11px] uppercase tracking-[1px] text-gray-400 mb-2">
+                  Free Consultation
+                </p>
+                <p className="text-sm text-foreground leading-relaxed">
+                  30-minute discovery call. No commitment, no sales pitch — just
+                  an honest conversation about what your business needs.
+                </p>
+              </div>
             </div>
           </Reveal>
 
-          <Reveal delay={120}>
-            <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-7 shadow-sm sm:p-8">
-              {done ? (
-                <div className="flex flex-col items-center justify-center py-12 text-center">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-blue-50 dark:bg-blue-950/50 text-blue-600">
-                    <CheckCircle2 className="h-7 w-7" />
-                  </div>
-                  <h3 className="mt-5 text-lg font-semibold text-slate-900 dark:text-white">Thank you</h3>
-                  <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-                    We've received your request and will be in touch shortly to schedule your consultation.
-                  </p>
+          <Reveal delay={100} className="lg:col-span-3">
+            {done ? (
+              <div className="py-16">
+                <p className="display-md text-foreground">Thank you.</p>
+                <p className="mt-4 text-base text-gray-500 max-w-sm">
+                  We've received your message and will be in touch within 24
+                  hours to schedule your free consultation.
+                </p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-8">
+                <div className="grid sm:grid-cols-2 gap-8">
+                  <Field
+                    label="Name"
+                    value={name}
+                    onChange={setName}
+                    placeholder="Jane Doe"
+                  />
+                  <Field
+                    label="Company"
+                    value={company}
+                    onChange={setCompany}
+                    placeholder="Acme Inc."
+                  />
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Schedule a Consultation</h3>
-                  <div className="grid gap-4 sm:grid-cols-2">
-                    <Field label="Name" value={name} onChange={setName} placeholder="Jane Doe" />
-                    <Field label="Company" value={company} onChange={setCompany} placeholder="Acme Inc." />
-                  </div>
-                  <Field label="Email" type="email" value={email} onChange={setEmail} placeholder="you@company.com" required />
-                  <Field label="Phone number (optional)" type="tel" value={phone} onChange={setPhone} placeholder="+1 (555) 000-0000" />
-                  <div>
-                    <label className="mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-300">
-                      How can we help?
-                    </label>
-                    <textarea
-                      value={message}
-                      onChange={(e) => setMessage(e.target.value)}
-                      rows={3}
-                      placeholder="Tell us about your project..."
-                      className="w-full rounded-md border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3.5 py-2.5 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
-                    />
-                  </div>
-                  <label className="flex items-start gap-2.5 text-xs text-slate-500 dark:text-slate-400">
-                    <input
-                      type="checkbox"
-                      checked={smsOptIn}
-                      onChange={(e) => setSmsOptIn(e.target.checked)}
-                      className="mt-0.5 h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
-                    />
-                    Text me updates. Msg &amp; data rates may apply. Reply STOP to unsubscribe.
-                  </label>
-                  {error && <p className="text-sm text-red-600">{error}</p>}
-                  <button
-                    type="submit"
-                    disabled={submitting}
-                    className="group inline-flex w-full items-center justify-center gap-2 rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors disabled:opacity-60"
-                  >
-                    {submitting ? 'Sending...' : 'Contact Us'}
-                    {!submitting && <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />}
-                  </button>
-                </form>
-              )}
-            </div>
+                <Field
+                  label="Email"
+                  type="email"
+                  value={email}
+                  onChange={setEmail}
+                  placeholder="you@company.com"
+                  required
+                />
+                <Field
+                  label="Phone"
+                  type="tel"
+                  value={phone}
+                  onChange={setPhone}
+                  placeholder="+63 912 345 6789"
+                />
+                <div>
+                  <label className="micro-label mb-3 block">Message</label>
+                  <textarea
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    rows={5}
+                    placeholder="Tell us about your project — what are you trying to build, what's the timeline, what's the budget range..."
+                    className="w-full rounded-lg border border-gray-200 bg-gray-50 dark:bg-gray-50 px-4 py-3 text-sm text-foreground placeholder:text-gray-400 focus:border-gray-400 focus:outline-none transition-colors resize-none"
+                  />
+                </div>
+                <label className="flex items-center gap-3 micro-label cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={smsOptIn}
+                    onChange={(e) => setSmsOptIn(e.target.checked)}
+                    className="mt-1 h-3.5 w-3.5 rounded-xs border-gray-300"
+                  />
+                  Text me project updates. Msg & data rates may apply.
+                </label>
+                {error && <p className="text-sm text-destructive">{error}</p>}
+                <button
+                  type="submit"
+                  disabled={submitting}
+                  className="group w-full justify-center inline-flex items-center gap-3 rounded-full bg-foreground text-background px-8 py-3.5 micro-label hover:opacity-80 transition-opacity duration-200 disabled:opacity-50"
+                >
+                  {submitting ? "Sending..." : "Send Message"}
+                  {!submitting && (
+                    <ArrowUpRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  )}
+                </button>
+              </form>
+            )}
           </Reveal>
         </div>
       </div>
@@ -136,25 +205,23 @@ const CTASection: React.FC = () => {
   );
 };
 
-interface FieldProps {
+const Field: React.FC<{
   label: string;
   value: string;
   onChange: (v: string) => void;
   type?: string;
   placeholder?: string;
   required?: boolean;
-}
-
-const Field: React.FC<FieldProps> = ({ label, value, onChange, type = 'text', placeholder, required }) => (
+}> = ({ label, value, onChange, type = "text", placeholder, required }) => (
   <div>
-    <label className="mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-300">{label}</label>
+    <label className="micro-label mb-3 block">{label}</label>
     <input
       type={type}
       value={value}
       required={required}
       placeholder={placeholder}
       onChange={(e) => onChange(e.target.value)}
-      className="w-full rounded-md border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3.5 py-2.5 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+      className="w-full rounded-lg border border-gray-200 bg-gray-50 dark:bg-gray-50 px-4 py-3 text-sm text-foreground placeholder:text-gray-400 focus:border-gray-400 focus:outline-none transition-colors"
     />
   </div>
 );

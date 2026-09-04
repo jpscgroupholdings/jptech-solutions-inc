@@ -1,25 +1,37 @@
 import React from "react";
 import Navbar from "./Navbar";
+import ScrollProgress from "./ScrollProgress";
 import Hero from "./Hero";
+import TrustBar from "./TrustBar";
 import Services from "./Services";
+import FeaturedWork from "./FeaturedWork";
 import WhyChooseUs from "./WhyChooseUs";
+import Testimonials from "./Testimonials";
 import Industries from "./Industries";
+import TechStack from "./TechStack";
 import Mission from "./Mission";
 import Process from "./Process";
+import FAQ from "./FAQ";
 import CTASection from "./CTASection";
 import Footer from "./Footer";
 
 const AppLayout: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-950 font-sans antialiased scroll-smooth">
+    <div className="relative min-h-screen bg-background font-sans antialiased">
+      <ScrollProgress />
       <Navbar />
       <main>
         <Hero />
+        <TrustBar />
         <Services />
-        <Industries />
+        <FeaturedWork />
         <WhyChooseUs />
+        <Testimonials />
+        <Industries />
+        <TechStack />
         <Mission />
         <Process />
+        <FAQ />
         <CTASection />
       </main>
       <Footer />

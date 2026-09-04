@@ -1,17 +1,38 @@
-import React from 'react';
-import Reveal from './Reveal';
+import React from "react";
+import Reveal from "./Reveal";
+import HalftoneField from "./HalftoneField";
 
 const Mission: React.FC = () => {
   return (
-    <section className="relative overflow-hidden bg-slate-900 dark:bg-slate-950 py-24 sm:py-32">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.15),transparent_60%)]" />
-      <div className="mx-auto max-w-4xl px-5 sm:px-8 text-center">
+    <section className="relative py-32 sm:py-48 overflow-hidden">
+      <HalftoneField fade="radial" className="opacity-15" />
+
+      <div className="relative px-6 sm:px-10 lg:px-16">
         <Reveal>
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-400">Our Mission</p>
-          <p className="mt-8 text-2xl font-semibold leading-snug text-white sm:text-3xl lg:text-[2.2rem] lg:leading-[1.3]">
-            Innovative Solutions. Reliable Technology. Sustainable Growth.
-          </p>
-          <div className="mx-auto mt-10 h-px w-24 bg-blue-500/60" />
+          <div className="">
+            <p className="micro-label mb-8">Our Mission</p>
+
+            <p className="display-xl text-foreground">
+              Build it right.
+              <br />
+              <span className="text-gray-300 dark:text-gray-700">
+                Make it last.
+              </span>
+            </p>
+
+            <div className="mt-24 grid gap-8 sm:grid-cols-2 max-w-4xl place-self-end">
+              <p className="text-lg text-gray-500 leading-relaxed">
+                We believe technology should solve real problems — not create new
+                ones. Every system we build is designed to scale, secured from day
+                one, and maintained by the same team that wrote it.
+              </p>
+              <p className="text-lg text-gray-500 leading-relaxed">
+                Since 2018, we've helped over 50 organizations across Southeast
+                Asia move off fragile legacy systems and onto infrastructure they
+                can trust. No shortcuts. No black boxes. Just engineering that works.
+              </p>
+            </div>
+          </div>
         </Reveal>
       </div>
     </section>

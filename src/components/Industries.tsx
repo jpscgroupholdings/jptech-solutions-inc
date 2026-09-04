@@ -1,39 +1,35 @@
-import React from 'react';
-import { INDUSTRIES } from '@/data/siteContent';
-import { INDUSTRY_ICONS } from './icons';
-import SectionHeader from './SectionHeader';
-import Reveal from './Reveal';
+import React from "react";
+import { INDUSTRIES } from "@/data/siteContent";
+import Reveal from "./Reveal";
 
 const Industries: React.FC = () => {
   return (
-    <section id="industries" className="bg-slate-50 dark:bg-slate-900/40 py-16 sm:py-20">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <SectionHeader
-          eyebrow="Industries We Serve"
-          title="Expertise Across Sectors"
-          description="We provide technology solutions for businesses across various industries. "
-          center
-        />
+    <section className="relative py-24 sm:py-32">
+      <div className="section-content px-6 sm:px-10 lg:px-16">
+        <Reveal>
+          <p className="micro-label mb-6">Industries</p>
+          <h2 className="display-md text-foreground max-w-2xl mb-6">
+            From fintech to food service — we build for your sector.
+          </h2>
+          <p className="text-base text-gray-500 leading-relaxed max-w-xl mb-12">
+            Our engineering depth spans regulated industries, high-volume retail,
+            and everything in between. We learn your domain fast and build
+            accordingly.
+          </p>
+        </Reveal>
 
-        <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-          {INDUSTRIES.map((industry, i) => {
-            const Icon = INDUSTRY_ICONS[industry];
-            return (
-              <Reveal
+        <Reveal delay={100}>
+          <div className="flex flex-wrap gap-3">
+            {INDUSTRIES.map((industry) => (
+              <span
                 key={industry}
-                delay={(i % 4) * 60}
-                className="group flex flex-col items-center gap-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-6 text-center transition-all duration-200 hover:-translate-y-1 hover:border-blue-300 dark:hover:border-blue-800 hover:shadow-sm"
+                className="inline-flex items-center rounded-full border border-gray-200 px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.5px] text-gray-500 hover:border-gray-400 hover:text-foreground transition-colors duration-200"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 transition-colors group-hover:bg-blue-50 dark:group-hover:bg-blue-950/50 group-hover:text-blue-600">
-                  {Icon && <Icon className="h-5 w-5" />}
-                </div>
-                <span className="text-sm font-medium leading-snug text-slate-700 dark:text-slate-300">
-                  {industry}
-                </span>
-              </Reveal>
-            );
-          })}
-        </div>
+                {industry}
+              </span>
+            ))}
+          </div>
+        </Reveal>
       </div>
     </section>
   );

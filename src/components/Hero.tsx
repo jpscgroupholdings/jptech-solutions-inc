@@ -1,72 +1,70 @@
-import React from 'react';
-import { ArrowRight, ShieldCheck, Zap, BarChart3, CalendarClock } from 'lucide-react';
-import { HERO_IMAGE, BOOKING_URL } from '@/data/siteContent';
-
-const trustStats = [
-  { icon: ShieldCheck, label: 'Enterprise-Grade Security' },
-  { icon: Zap, label: 'Scalable by Design' },
-  { icon: BarChart3, label: 'Measurable Results' },
-];
+import React from "react";
+import HalftoneField from "./HalftoneField";
+import { STATS } from "@/data/siteContent";
+import { ConstellationArt } from "./SVGArt";
 
 const Hero: React.FC = () => {
   return (
-    <section id="top" className="relative overflow-hidden bg-white dark:bg-slate-950 pt-28 pb-20 sm:pt-36 sm:pb-28">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,rgba(37,99,235,0.06),transparent_55%)] dark:bg-[radial-gradient(ellipse_at_top_right,rgba(37,99,235,0.12),transparent_55%)]" />
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16">
-        <div>
-          <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 px-3.5 py-1.5 text-xs font-medium text-slate-600 dark:text-slate-300">
-            <span className="h-1.5 w-1.5 rounded-full bg-blue-600" />
-            Enterprise Technology Partner
-          </span>
-          <h1 className="mt-6 text-4xl font-bold leading-[1.1] tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-[3.4rem]">
-            Technology That Powers Business Growth
-          </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-600 dark:text-slate-300 sm:text-lg text-justify">
-            At <span className='text-black font-bold'>JP Technology Solutions</span>, we help businesses accelerate digital transformation
-            through <span className='italic text-blue-600'>cloud infrastructure</span>, <span className='italic text-blue-600'>custom software development</span>, <span className='italic text-blue-600'>enterprise platforms</span>,
-            and managed <span className='italic text-blue-600'>IT services</span>. We build secure, scalable, and innovative technology
-            solutions that improve efficiency, automate operations, and support long-term
-            business growth.
+    <section
+      id="top"
+      className="relative min-h-screen flex flex-col justify-end pt-16 pb-16 sm:pb-24 overflow-hidden"
+    >
+      <div className="absolute inset-0">
+        <ConstellationArt />
+      </div>
+
+      <HalftoneField fade="bottom" className="opacity-30" />
+
+      <div className="relative z-10 px-6 sm:px-10 lg:px-16">
+        <div className="flex items-center gap-3 mb-8">
+          <span className="h-2 w-2 rounded-full bg-foreground animate-pulse-dot" />
+          <p className="micro-label">Available for new projects — Q4 2026</p>
+        </div>
+
+        <h1 className="display-xl text-foreground">
+          technology
+          <br />
+          that
+          <span className="text-gray-300 dark:text-gray-700"> works.</span>
+        </h1>
+
+        <div className="mt-12 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-8">
+          <p className="text-lg sm:text-xl text-gray-500 leading-relaxed max-w-lg">
+            Cloud, custom platforms, AI, and security — built end-to-end by one
+            team that actually cares about your operations.
           </p>
-          <p className="mt-3 max-w-xl text-base leading-relaxed text-slate-500 dark:text-slate-400">
-            Whether you're a startup, SME, or enterprise, we deliver technology tailored to
-            your business needs.
-          </p>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+
+          <div className="flex items-center gap-6 shrink-0">
             <a
               href="#contact"
-              className="group inline-flex items-center justify-center gap-2 rounded-md text-white bg-blue-600 dark:bg-blue-900 px-6 py-3.5 text-sm font-semibold dark:text-slate-100 dark:hover:border-slate-600 hover:bg-blue-700 dark:hover:bg-blue-800 transition-colors shadow-sm"
+              className="inline-flex items-center rounded-full bg-foreground text-background px-6 py-3 micro-label hover:opacity-80 transition-opacity duration-200"
             >
-              Book a Consultation
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              Start a Project
             </a>
             <a
               href="#services"
-              className="inline-flex items-center justify-center gap-2 rounded-md border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-6 py-3.5 text-sm font-semibold text-slate-800 dark:text-slate-100 hover:border-slate-400 dark:hover:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+              className="micro-label text-gray-400 hover:text-foreground transition-colors duration-200 underline decoration-gray-200 underline-offset-4"
             >
-              Explore Services
+              See what we do ↗
             </a>
-          </div>
-          <div className="mt-10 flex flex-wrap gap-x-7 gap-y-3 border-t border-slate-200 dark:border-slate-800 pt-7">
-            {trustStats.map(({ icon: Icon, label }) => (
-              <div key={label} className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
-                <Icon className="h-4 w-4 text-blue-600" />
-                {label}
-              </div>
-            ))}
           </div>
         </div>
 
-        <div className="relative">
-          <div className="absolute -inset-3 rounded-2xl bg-slate-100 dark:bg-slate-900 -z-10" />
-          <div className="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 shadow-xl shadow-slate-900/5">
-            <img
-              src={HERO_IMAGE}
-              alt="Abstract enterprise technology network illustration"
-              className="h-full w-full object-cover"
-              loading="eager"
-            />
-          </div>
+        <div className="mt-16 sm:mt-24 grid grid-cols-2 sm:grid-cols-4 gap-px bg-gray-200">
+          {STATS.map((stat) => (
+            <div
+              key={stat.label}
+              className="bg-background py-5 sm:py-6 text-center"
+            >
+              <p className="display-md text-foreground">{stat.value}</p>
+              <p className="micro-label mt-1">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 flex items-center gap-3">
+          <div className="h-px w-16 bg-gray-200" />
+          <span className="micro-label">Scroll</span>
         </div>
       </div>
     </section>

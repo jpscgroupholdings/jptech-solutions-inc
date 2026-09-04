@@ -1,21 +1,30 @@
-import React from 'react';
-import Reveal from './Reveal';
+import React from "react";
+import Reveal from "./Reveal";
 
 interface SectionHeaderProps {
-  eyebrow: string;
+  number: string;
+  label: string;
   title: string;
   description?: string;
-  center?: boolean;
 }
 
-const SectionHeader: React.FC<SectionHeaderProps> = ({ eyebrow, title, description, center }) => (
-  <Reveal className={center ? 'mx-auto max-w-2xl text-center' : 'max-w-2xl'}>
-    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-600">{eyebrow}</p>
-    <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+const SectionHeader: React.FC<SectionHeaderProps> = ({
+  number,
+  label,
+  title,
+  description,
+}) => (
+  <Reveal className="max-w-reading">
+    <p className="font-mono text-[10px] uppercase tracking-[2px] text-gray-400 mb-4">
+      {number} — {label}
+    </p>
+    <h2 className="text-3xl sm:text-4xl font-semibold tracking-[-0.02em] text-foreground">
       {title}
     </h2>
     {description && (
-      <p className="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-300">{description}</p>
+      <p className="mt-4 text-base leading-relaxed text-gray-500">
+        {description}
+      </p>
     )}
   </Reveal>
 );

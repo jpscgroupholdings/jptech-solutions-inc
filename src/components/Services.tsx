@@ -1,68 +1,58 @@
-import React from 'react';
-import { Check } from 'lucide-react';
-import { SERVICES } from '@/data/siteContent';
-import { SERVICE_ICONS } from './icons';
-import SectionHeader from './SectionHeader';
-import Reveal from './Reveal';
+import React from "react";
+import { SERVICES } from "@/data/siteContent";
+import Reveal from "./Reveal";
 
 const Services: React.FC = () => {
   return (
-    <section id="services" className="bg-slate-50 dark:bg-slate-900/40 py-20 sm:py-28">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <SectionHeader
-          eyebrow="Our Services"
-          title="Comprehensive Technology Services"
-          description="A full spectrum of capabilities designed to support your organization across its entire digital journey."
-        />
+    <section id="services" className="relative py-24 sm:py-40">
+      <div className="px-6 sm:px-10 lg:px-16">
+        <Reveal>
+          <p className="micro-label mb-6">01 — Services</p>
+          <h2 className="display-lg text-foreground max-w-4xl">
+            Six practice areas.
+            <br />
+            <span className="text-gray-300 dark:text-gray-700">
+              One integrated team.
+            </span>
+          </h2>
+          <p className="mt-6 text-base text-gray-500 leading-relaxed max-w-xl">
+            We don't subcontract. Every discipline — cloud, software, AI,
+            security — lives under one roof, under one SLA, with one team
+            accountable for results.
+          </p>
+        </Reveal>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((service, i) => {
-            const Icon = SERVICE_ICONS[service.id];
-            return (
-              <Reveal
-                key={service.id}
-                delay={(i % 3) * 80}
-                className={`group flex flex-col rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-blue-300 dark:hover:border-blue-800 hover:shadow-md ${
-                  service.extra ? '' : ''
-                }`}
-              >
-                <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-blue-50 dark:bg-blue-950/50 text-blue-600 ring-1 ring-blue-100 dark:ring-blue-900">
-                  {Icon && <Icon className="h-5 w-5" />}
+        <div className="mt-20 sm:mt-28 grid gap-px bg-gray-200 sm:grid-cols-2 lg:grid-cols-3">
+          {SERVICES.map((service, i) => (
+            <Reveal key={service.id} delay={i * 70}>
+              <div className="group bg-background h-full p-8 sm:p-10 min-h-[300px] flex flex-col justify-between transition-colors duration-200 hover:bg-gray-50 dark:hover:bg-gray-50">
+                <div>
+                  <span className="font-mono text-[11px] uppercase tracking-[2px] text-gray-400">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+
+                  <h3 className="mt-4 text-2xl sm:text-3xl font-semibold text-foreground tracking-[-0.02em]">
+                    {service.title}
+                  </h3>
+
+                  <p className="mt-4 text-sm leading-relaxed text-gray-500 max-w-sm">
+                    {service.description}
+                  </p>
                 </div>
-                <h3 className="mt-5 text-lg font-semibold text-slate-900 dark:text-white">
-                  {service.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                  {service.description}
-                </p>
-                <ul className="mt-5 space-y-2">
+
+                <ul className="mt-8 flex flex-wrap gap-2">
                   {service.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-slate-700 dark:text-slate-300">
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-blue-600" />
-                      <span>{item}</span>
+                    <li
+                      key={item}
+                      className="inline-flex items-center rounded-full border border-gray-200 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.5px] text-gray-400"
+                    >
+                      {item}
                     </li>
                   ))}
                 </ul>
-                {service.extra && (
-                  <div className="mt-5 border-t border-slate-100 dark:border-slate-800 pt-4">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
-                      {service.extra.label}
-                    </p>
-                    <div className="mt-2.5 flex flex-wrap gap-1.5">
-                      {service.extra.values.map((v) => (
-                        <span
-                          key={v}
-                          className="rounded-md bg-slate-100 dark:bg-slate-800 px-2.5 py-1 text-xs font-medium text-slate-600 dark:text-slate-300"
-                        >
-                          {v}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </Reveal>
-            );
-          })}
+              </div>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>

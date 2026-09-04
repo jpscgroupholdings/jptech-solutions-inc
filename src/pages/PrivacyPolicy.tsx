@@ -1,54 +1,68 @@
-import React from 'react';
-import { COMPANY, PRIVACY_POLICY, CONTACT } from '@/data/siteContent';
-import { Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
+import React from "react";
+import { COMPANY, PRIVACY_POLICY, CONTACT } from "@/data/siteContent";
+import { Link } from "react-router-dom";
+import { ArrowUpLeft } from "lucide-react";
 
 const PrivacyPolicy: React.FC = () => {
   const year = new Date().getFullYear();
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-950 font-sans antialiased">
-      <div className="mx-auto max-w-3xl px-5 sm:px-8 py-20 sm:py-28">
+    <div className="min-h-screen bg-background font-sans antialiased">
+      <div className="px-6 sm:px-10 lg:px-16 py-16 sm:py-24 max-w-5xl mx-auto">
         <Link
           to="/"
-          className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors"
+          className="inline-flex items-center gap-2 micro-label hover:text-foreground transition-colors duration-200"
         >
-          <ArrowLeft className="h-4 w-4" />
-          Back to Home
+          <ArrowUpLeft className="h-3.5 w-3.5" />
+          Back
         </Link>
 
-        <h1 className="mt-8 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
-          Privacy Policy
+        <p className="micro-label mt-12 mb-4">Legal</p>
+        <h1 className="display-lg text-foreground">
+          Privacy
+          <br />
+          Policy
         </h1>
-        <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">
-          Last updated: July {new Date().getDate()}, {year}
+        <p className="mt-4 micro-label">
+          Last updated: September {new Date().getDate()}, {year}
         </p>
-        <p className="mt-6 text-base leading-relaxed text-slate-600 dark:text-slate-300">
-          {COMPANY.shortName} ("we", "us", or "our") is committed to protecting your privacy.
-          This policy explains how we collect, use, and safeguard your information when you
-          visit our website or engage our services.
+        <p className="mt-8 text-base leading-relaxed text-gray-500 max-w-xl">
+          {COMPANY.shortName} ("we", "us", or "our") is committed to protecting
+          your privacy. This policy explains how we collect, use, and safeguard
+          your information.
         </p>
 
-        <div className="mt-10 space-y-8">
-          {PRIVACY_POLICY.map((section) => (
-            <div key={section.heading}>
-              <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
-                {section.heading}
-              </h2>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+        <div className="mt-16">
+          {PRIVACY_POLICY.map((section, i) => (
+            <div
+              key={section.heading}
+              className="py-8 border-t border-gray-200"
+            >
+              <div className="flex items-baseline gap-4 mb-3">
+                <span className="font-mono text-[11px] uppercase tracking-[2px] text-gray-400 shrink-0">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h2 className="text-lg font-semibold text-foreground">
+                  {section.heading}
+                </h2>
+              </div>
+              <p className="text-sm leading-relaxed text-gray-500 pl-10">
                 {section.body}
               </p>
             </div>
           ))}
+          <div className="border-t border-gray-200" />
         </div>
 
-        <div className="mt-12 border-t border-slate-200 dark:border-slate-800 pt-8">
-          <p className="text-sm text-slate-500 dark:text-slate-400">
-            For questions about this policy, contact us at{' '}
-            <a href={`mailto:${CONTACT.email}`} className="text-blue-600 hover:underline">
+        <div className="mt-12">
+          <p className="text-sm text-gray-500">
+            Questions?{" "}
+            <a
+              href={`mailto:${CONTACT.email}`}
+              className="text-foreground underline decoration-gray-200 underline-offset-4 hover:decoration-foreground transition-colors duration-200"
+            >
               {CONTACT.email}
             </a>
-            .
           </p>
         </div>
       </div>
