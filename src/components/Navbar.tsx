@@ -15,29 +15,23 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-gray-200"
-          : "bg-transparent"
-      }`}
-    >
-      <nav className="mx-auto flex h-16 items-center justify-between px-6 sm:px-10 lg:px-16">
-        <a href="#top" aria-label="Home" className="flex items-center gap-3">
+    <header className={`fixed top-0 inset-x-0 z-50 bg-background`}>
+      <nav className="mx-auto flex items-center justify-between px-6 sm:px-10 lg:px-16">
+        <a href="#top" aria-label="Home" className="flex items-center">
           <img
             src="/jptechlogo-nobg.png"
             alt="JP Technology Solutions Inc."
-            className="h-8 w-8 dark:invert"
+            className={`dark:invert transition-all duration-500 ease-out h-24 w-24
+            `}
           />
-          <span className="hidden sm:inline micro-label text-primary-light">JPTech</span>
         </a>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-10">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="micro-label text-primary-light hover:text-foreground transition-colors duration-200"
+              className="micro-label text-primary hover:text-foreground transition-colors duration-200"
             >
               {link.label}
             </a>
@@ -48,14 +42,14 @@ const Navbar: React.FC = () => {
           <ThemeToggle />
           <a
             href="#contact"
-            className="hidden md:inline-flex items-center rounded-xs bg-primary text-primary-foreground px-5 py-2 micro-label hover:bg-primary-dark transition-colors duration-200"
+            className="hidden md:inline-flex items-center rounded-xs bg-primary text-primary-foreground px-5 py-2.5 micro-label hover:bg-primary-dark transition-colors duration-200"
           >
             Let's Talk
           </a>
           <button
             onClick={() => setOpen((o) => !o)}
             aria-label="Toggle menu"
-            className="md:hidden flex h-8 w-8 items-center justify-center text-gray-400"
+            className="md:hidden flex h-10 w-10 items-center justify-center text-gray-400 hover:text-foreground transition-colors duration-200"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -66,22 +60,29 @@ const Navbar: React.FC = () => {
         <div className="fixed inset-0 z-40 bg-background md:hidden">
           <button
             onClick={() => setOpen(false)}
-            className="absolute top-5 right-6 flex h-8 w-8 items-center justify-center text-gray-400"
+            className="absolute top-6 right-6 flex h-10 w-10 items-center justify-center text-gray-400 hover:text-foreground transition-colors duration-200"
           >
             <X className="h-6 w-6" />
           </button>
-          <div className="flex flex-col justify-center h-full px-10 gap-10">
+          <div className="flex flex-col justify-center h-full px-10 gap-8">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="display-lg text-foreground hover:text-gray-400 transition-colors"
+                className="display-lg text-foreground hover:text-primary-light transition-colors duration-200"
               >
                 {link.label.toLowerCase()}
               </a>
             ))}
-            <div className="mt-6 pt-6 border-t border-gray-200">
+            <div className="mt-4 pt-8 border-t border-gray-200 flex flex-col gap-5">
+              <a
+                href="#contact"
+                onClick={() => setOpen(false)}
+                className="inline-flex items-center justify-center rounded-xs bg-primary text-primary-foreground px-8 py-3 micro-label hover:bg-primary-dark transition-colors duration-200"
+              >
+                Let's Talk
+              </a>
               <ThemeToggle />
             </div>
           </div>

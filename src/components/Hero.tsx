@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="top"
-      className="relative min-h-screen flex flex-col justify-end pt-16 pb-16 sm:pb-24 overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-end pt-36 pb-16 sm:pb-24 overflow-hidden"
     >
       <div className="absolute inset-0">
         <ConstellationArt />

@@ -84,7 +84,7 @@ export const ConstellationArt: React.FC<{ className?: string }> = ({ className }
       <line x1="700" y1="300" x2="700" y2="120" />
     </g>
     {/* Nodes */}
-    <g fill="#8A93A6" opacity="0.25">
+    <g fill="#8A93A6" opacity="0.70">
       <rect x="97" y="77" width="5" height="5" />
       <rect x="247" y="147" width="5" height="5" />
       <rect x="397" y="87" width="5" height="5" />
