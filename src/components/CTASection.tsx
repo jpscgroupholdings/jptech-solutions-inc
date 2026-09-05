@@ -58,12 +58,12 @@ const CTASection: React.FC = () => {
           <h2 className="display-lg text-foreground max-w-3xl">
             Let's build
             <br />
-            <span className="text-primary">something.</span>
+            <span className="text-primary">what's next.</span>
           </h2>
           <p className="mt-6 text-base text-gray-500 leading-relaxed max-w-xl">
-            Book a free 30-minute consultation. We'll discuss your goals,
-            current systems, and challenges — then prepare a tailored proposal
-            within a week.
+            Whether you need a new business system, website, HRIS, cloud
+            infrastructure, or AI-powered solution — talk to our technology
+            team and let's turn your requirements into technology that works.
           </p>
         </Reveal>
 

@@ -9,16 +9,16 @@ const Services: React.FC = () => {
         <Reveal>
           <p className="micro-label text-primary-light mb-6">01 — Services</p>
           <h2 className="display-lg text-foreground max-w-4xl">
-            Six practice areas.
+            From custom systems
             <br />
             <span className="text-primary">
-              One integrated team.
+              to managed services.
             </span>
           </h2>
           <p className="mt-6 text-base text-gray-500 leading-relaxed max-w-xl">
-            We don't subcontract. Every discipline — cloud, software, AI,
-            security — lives under one roof, under one SLA, with one team
-            accountable for results.
+            We develop and integrate technology around the specific needs of
+            each business — from custom-built systems and websites to HRIS,
+            cloud infrastructure, AI solutions, and ongoing managed support.
           </p>
         </Reveal>
 

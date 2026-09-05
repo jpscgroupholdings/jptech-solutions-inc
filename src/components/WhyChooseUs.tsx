@@ -10,21 +10,20 @@ const WhyChooseUs: React.FC = () => {
         <Reveal>
           <div className="flex items-center gap-3 mb-6">
             <span className="chip-gold rounded-full px-3 py-1 font-mono text-[9px] uppercase tracking-[2px]" style={{ color: "hsl(var(--gold-foreground))" }}>
-              02 — Why Us
+              02 — Why JP Technology
             </span>
           </div>
           <h2 className="display-lg text-foreground max-w-3xl">
-            Not a vendor.
+            Technology that powers
             <br />
             <span className="text-primary">
-              A partner.
+              business growth.
             </span>
           </h2>
           <ConstellationDecor position="top-right"/>
           <p className="mt-12 text-base text-gray-500 leading-relaxed max-w-2xl">
-            Most IT shops hand you a proposal and disappear into a backlog.
-            We embed with your team, learn your operations, and stay accountable
-            long after launch day.
+            We deliver practical, scalable, and business-focused technology
+            solutions — designed around your specific needs, not ours.
           </p>
         </Reveal>
 

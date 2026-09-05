@@ -5,6 +5,7 @@ import Hero from "./Hero";
 import TrustBar from "./TrustBar";
 import Services from "./Services";
 import FeaturedWork from "./FeaturedWork";
+import Partners from "./Partners";
 import WhyChooseUs from "./WhyChooseUs";
 import Testimonials from "./Testimonials";
 import Industries from "./Industries";
@@ -24,13 +25,15 @@ const AppLayout: React.FC = () => {
         <Hero />
         <TrustBar />
         <Services />
-        <FeaturedWork />
+        {/* <FeaturedWork /> */}
+        <Partners />
         <WhyChooseUs />
-        <Testimonials />
-        <Industries />
-        <TechStack />
-        <Mission />
+        {/* <Testimonials /> */}
         <Process />
+        <Industries />
+        {/* <TechStack /> */}
+        <Mission />
+
         <FAQ />
         <CTASection />
       </main>

@@ -1,6 +1,6 @@
 import React from "react";
 import HalftoneField from "./HalftoneField";
-import { STATS } from "@/data/siteContent";
+import { STATS, COMPANY } from "@/data/siteContent";
 import { ConstellationArt } from "./SVGArt";
 
 const Hero: React.FC = () => {
@@ -18,20 +18,23 @@ const Hero: React.FC = () => {
       <div className="relative z-10 px-6 sm:px-10 lg:px-16">
         <div className="flex items-center gap-3 mb-8">
           <span className="h-2 w-2 rounded-full chip-gold animate-pulse-dot" />
-          <p className="micro-label text-primary-light">Available for new projects — Q4 2026</p>
+          <p className="micro-label text-primary-light">
+            The technology arm of {COMPANY.parentGroup}
+          </p>
         </div>
 
         <h1 className="display-xl text-primary">
-          technology
+          let's build
           <br />
-          that
-          <span className="text-gold-light"> works.</span>
+          what's
+          <span className="text-gold-light"> next.</span>
         </h1>
 
         <div className="mt-12 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-8">
           <p className="text-lg sm:text-xl text-primary/60 leading-relaxed max-w-lg">
-            Cloud, custom platforms, AI, and security — built end-to-end by one
-            team that actually cares about your operations.
+            Practical, scalable, and business-focused technology solutions that
+            help organizations improve operations, automate processes, and build
+            better digital experiences.
           </p>
 
           <div className="flex items-center gap-6 shrink-0">
@@ -39,7 +42,7 @@ const Hero: React.FC = () => {
               href="#contact"
               className="inline-flex items-center rounded-full bg-primary text-primary-foreground px-6 py-3 micro-label hover:opacity-90 transition-opacity duration-200"
             >
-              Start a Project
+              Talk to Our Team
             </a>
             <a
               href="#services"
@@ -51,7 +54,7 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="mt-16 sm:mt-24 grid grid-cols-2 sm:grid-cols-4 gap-px bg-primary-light/60">
-          {STATS.map((stat, i) => (
+          {STATS.map((stat) => (
             <div
               key={stat.label}
               className="bg-background py-5 sm:py-6 text-center"

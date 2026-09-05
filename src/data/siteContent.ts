@@ -7,75 +7,93 @@ export interface ServiceItem {
 
 export const SERVICES: ServiceItem[] = [
   {
-    id: "cloud",
-    title: "Cloud",
+    id: "systems-development",
+    title: "Systems Development",
     description:
-      "Migrate, scale, and secure your infrastructure on Alibaba Cloud, AWS, or Google Cloud. We handle the plumbing — you focus on the product.",
+      "Custom-built systems designed around your business processes.",
     items: [
-      "Migration & Lift-Shift",
-      "Multi-Cloud Architecture",
-      "Disaster Recovery",
-      "Cost Optimization",
+      "Business Management Systems",
+      "Workflow & Process Automation",
+      "Custom Web Applications",
+      "Database & API Development",
+      "Internal Management Systems",
+      "System Integration",
+      "Customized Business Solutions",
     ],
   },
   {
-    id: "platforms",
-    title: "Custom Platforms",
+    id: "websites-digital-platforms",
+    title: "Websites & Digital Platforms",
     description:
-      "ERP, CRM, HRIS, inventory — purpose-built systems that replace the spreadsheets and duct tape holding your operations together.",
+      "Modern, responsive websites and digital platforms designed to support your brand and business operations.",
     items: [
-      "Enterprise Systems",
-      "Workflow Automation",
-      "API Integration",
-      "Procurement & Finance",
-    ],
-  },
-  {
-    id: "mobile",
-    title: "Mobile Apps",
-    description:
-      "Native and cross-platform apps your customers actually want to open. Android, iOS, and everything in between.",
-    items: [
-      "Android & iOS",
-      "Cross-Platform",
-      "E-Commerce Apps",
-      "Internal Tools",
-    ],
-  },
-  {
-    id: "web",
-    title: "Web",
-    description:
-      "Corporate sites, e-commerce, portals, and booking platforms — fast, accessible, and built to convert.",
-    items: [
-      "Corporate & E-Commerce",
+      "Corporate Websites",
+      "E-Commerce Platforms",
+      "Online Ordering Systems",
       "Customer Portals",
-      "Booking Systems",
-      "CMS & Landing Pages",
+      "Admin & Management Portals",
+      "Booking & Service Platforms",
+      "Mobile-Responsive Applications",
     ],
   },
   {
-    id: "ai",
-    title: "AI & Automation",
+    id: "hris-workforce-solutions",
+    title: "HRIS & Workforce Solutions",
     description:
-      "Chatbots, document processing, predictive analytics — AI that solves real problems, not demo-day theater.",
+      "Technology solutions that simplify and automate human resource management.",
     items: [
-      "AI Chatbots",
-      "Document Processing",
-      "Predictive Analytics",
-      "BI Dashboards",
+      "Employee Management",
+      "Attendance & Time Tracking",
+      "Leave & Overtime Management",
+      "Performance Evaluation",
+      "HR Analytics & Reporting",
+      "Employee Self-Service",
+      "Workflow & Approval Automation",
     ],
   },
   {
-    id: "security",
-    title: "Cybersecurity",
+    id: "cloud-it-infrastructure",
+    title: "Cloud & IT Infrastructure",
     description:
-      "Enterprise-grade security without the enterprise-grade headache. Firewalls, IAM, monitoring, and incident response.",
+      "Reliable cloud solutions to support business applications, data, and digital operations.",
     items: [
-      "Endpoint & Network Security",
-      "Identity & Access",
-      "Vulnerability Assessment",
-      "Incident Response",
+      "Cloud Infrastructure",
+      "Cloud Migration",
+      "Cloud Management",
+      "Server & Application Deployment",
+      "Backup & Disaster Recovery",
+      "Infrastructure Optimization",
+      "Managed IT Services",
+    ],
+  },
+  {
+    id: "ai-business-automation",
+    title: "AI & Business Automation",
+    description:
+      "Intelligent technology designed to improve efficiency, customer engagement, and decision-making.",
+    items: [
+      "AI-Powered Business Solutions",
+      "Customer Data & Analytics",
+      "AI Marketing Solutions",
+      "Process Automation",
+      "Intelligent Chat & Customer Support",
+      "Data-Driven Insights",
+      "AI Integration",
+    ],
+  },
+  {
+    id: "managed-technology-services",
+    title: "Managed Technology Services",
+    description:
+      "Ongoing technology support to keep your business systems secure, reliable, and optimized.",
+    items: [
+      "IT Support",
+      "System Monitoring",
+      "Application Support",
+      "Infrastructure Management",
+      "Security & Access Management",
+      "Maintenance & Updates",
+      "Technology Consulting",
     ],
   },
 ];
@@ -87,24 +105,29 @@ export interface FeatureItem {
 
 export const WHY_CHOOSE_US: FeatureItem[] = [
   {
-    title: "One partner, not six vendors",
+    title: "Business-First Technology",
     description:
-      "Cloud, software, security, support — one team that understands your entire stack and answers to one SLA.",
+      "We don't build technology simply for the sake of technology. We focus on solutions that solve real business problems.",
   },
   {
-    title: "Built for your operations",
+    title: "Customized Solutions",
     description:
-      "We don't sell off-the-shelf. Every system is designed around how your business actually runs.",
+      "Every business operates differently. Our systems are designed around your processes, requirements, and objectives.",
   },
   {
-    title: "Scales when you do",
+    title: "Integrated Ecosystem",
     description:
-      "Architecture that handles 100 users today and 100,000 tomorrow — without a rewrite.",
+      "We connect systems, platforms, cloud services, data, and AI to create a more connected digital environment.",
   },
   {
-    title: "Security by default",
+    title: "Scalable & Future-Ready",
     description:
-      "Encryption, access control, monitoring, and compliance baked in from day one — not bolted on after a breach.",
+      "Our solutions are designed to grow with your business and adapt as your technology requirements evolve.",
+  },
+  {
+    title: "End-to-End Support",
+    description:
+      "From planning and development to deployment, maintenance, and optimization, we support your technology journey.",
   },
 ];
 
@@ -132,31 +155,31 @@ export interface ProcessStep {
 export const PROCESS_STEPS: ProcessStep[] = [
   {
     step: "01",
-    title: "Discovery",
+    title: "Understand",
     description:
-      "We learn your business — goals, pain points, existing systems, stakeholders.",
+      "We work closely with your business to understand operations, goals, pain points, and existing systems.",
   },
   {
     step: "02",
-    title: "Strategy",
+    title: "Design",
     description:
-      "A tailored technology roadmap with milestones, budgets, and clear deliverables.",
+      "User-centered interfaces and solution architecture prototyped and validated with your team before development begins.",
   },
   {
     step: "03",
-    title: "Design",
-    description:
-      "User-centered interfaces prototyped and tested with your actual team before a line of code is written.",
-  },
-  {
-    step: "04",
-    title: "Build",
+    title: "Develop",
     description:
       "Modern engineering practices. Clean code. Tested at every layer. Demoed every two weeks.",
   },
   {
+    step: "04",
+    title: "Integrate",
+    description:
+      "We connect new systems with your existing platforms, data, and workflows — ensuring everything works together seamlessly.",
+  },
+  {
     step: "05",
-    title: "Launch",
+    title: "Deploy",
     description:
       "Smooth production rollout with zero downtime, a rollback plan, and your team fully trained.",
   },
@@ -164,7 +187,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
     step: "06",
     title: "Support",
     description:
-      "Continuous monitoring, proactive updates, and a team that picks up the phone at 2am.",
+      "Continuous monitoring, proactive updates, and ongoing optimization as your business grows.",
   },
 ];
 
@@ -225,15 +248,7 @@ export const TECH_STACK: TechCategory[] = [
   },
   {
     category: "Development",
-    tools: [
-      "React",
-      "Next.js",
-      "Node.js",
-      "Python",
-      "Java",
-      ".NET",
-      "Flutter",
-    ],
+    tools: ["React", "Next.js", "Node.js", "Python", "Java", ".NET", "Flutter"],
   },
   {
     category: "Data & AI",
@@ -355,9 +370,38 @@ export const CERTIFICATIONS: string[] = [
   "DICT Registered",
 ];
 
+export interface Partner {
+  name: string;
+  description: string;
+}
+
+export const PARTNERS: Partner[] = [
+  {
+    name: "Alibaba Cloud",
+    description:
+      "Cloud computing, infrastructure, database, security, and AI services.",
+  },
+  {
+    name: "Amazon Web Services (AWS)",
+    description:
+      "Flexible and scalable cloud infrastructure and application services.",
+  },
+  {
+    name: "ByteDance / TikTok",
+    description:
+      "Technology and digital ecosystem solutions supporting AI, data, marketing, and customer engagement initiatives.",
+  },
+  {
+    name: "Digital One Solutions",
+    description:
+      "Our technology and cloud services foundation, supporting enterprise cloud solutions and digital transformation.",
+  },
+];
+
 export const NAV_LINKS = [
   { label: "Services", href: "#services" },
   { label: "Work", href: "#work" },
+  { label: "Partners", href: "#partners" },
   { label: "Why Us", href: "#why-us" },
   { label: "Process", href: "#process" },
   { label: "Contact", href: "#contact" },
@@ -371,6 +415,9 @@ export const COMPANY = {
   shortName: "JP Technology Solutions",
   abbreviation: "JP Technology",
   tagline: "Technology that actually works.",
+  parentGroup: "JP Group",
+  description:
+    "JP Technology Solutions is the technology arm of JP Group, delivering practical, scalable, and business-focused technology solutions that help organizations improve operations, automate processes, and build better digital experiences.",
 };
 
 export const CONTACT = {

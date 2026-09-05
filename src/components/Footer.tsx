@@ -26,9 +26,10 @@ const Footer: React.FC = () => {
               <span className="micro-label text-primary-light">{COMPANY.shortName}</span>
             </div>
             <p className="text-sm text-gray-500 max-w-sm leading-relaxed">
-              Enterprise technology partner delivering cloud infrastructure,
-              custom software, AI automation, and managed IT services across
-              Southeast Asia.
+              The technology arm of {COMPANY.parentGroup} — delivering
+              practical, scalable, and business-focused technology solutions
+              including cloud infrastructure, custom software, AI automation,
+              and managed IT services.
             </p>
             <div className="flex gap-3 mt-6">
               {SOCIAL_LINKS.map(({ label, href }) => {
