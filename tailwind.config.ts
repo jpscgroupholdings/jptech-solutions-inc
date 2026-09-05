@@ -29,6 +29,8 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          dark: "hsl(var(--primary-dark))",
+          light: "hsl(var(--primary-light))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -67,6 +69,15 @@ export default {
           900: "hsl(var(--gray-900))",
           950: "hsl(var(--gray-950))",
         },
+        // Brand accents — gold is rationed to one "loud" element per view.
+        // See jptech-minimal-design.md, Color section.
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          mid: "hsl(var(--gold-mid))",
+          light: "hsl(var(--gold-light))",
+          foreground: "hsl(var(--gold-foreground))",
+        },
+        bronze: "hsl(var(--bronze))",
       },
       fontFamily: {
         sans: ["Geist", "system-ui", "sans-serif"],
