@@ -7,7 +7,7 @@ const Testimonials: React.FC = () => {
     <section className="py-24 sm:py-40 border-t border-t-gray-200">
       <div className="px-6 sm:px-10 lg:px-16 max-w-[90rem] mx-auto ">
         <Reveal>
-          <p className="micro-label mb-6">What clients say</p>
+          <p className="micro-label text-primary-light mb-6">What clients say</p>
           <h2 className="display-md text-foreground max-w-2xl mb-16 sm:mb-20">
             Don't take our word for it.
           </h2>
@@ -27,7 +27,7 @@ const Testimonials: React.FC = () => {
                   <p className="text-sm font-semibold text-foreground">
                     {t.author}
                   </p>
-                  <p className="micro-label mt-1">
+                  <p className="micro-label text-primary-light mt-1">
                     {t.role}, {t.company}
                   </p>
                 </footer>

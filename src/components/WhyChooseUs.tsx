@@ -8,11 +8,15 @@ const WhyChooseUs: React.FC = () => {
     <section id="why-us" className="relative py-24 sm:py-40">
       <div className="section-content px-6 sm:px-10 lg:px-16">
         <Reveal>
-          <p className="micro-label mb-6">02 — Why Us</p>
+          <div className="flex items-center gap-3 mb-6">
+            <span className="chip-gold rounded-full px-3 py-1 font-mono text-[9px] uppercase tracking-[2px]" style={{ color: "hsl(var(--gold-foreground))" }}>
+              02 — Why Us
+            </span>
+          </div>
           <h2 className="display-lg text-foreground max-w-3xl">
             Not a vendor.
             <br />
-            <span className="text-gray-300 dark:text-gray-700">
+            <span className="text-primary">
               A partner.
             </span>
           </h2>
@@ -29,9 +33,12 @@ const WhyChooseUs: React.FC = () => {
             <Reveal key={feature.title} delay={i * 70}>
               <div className="group py-10 sm:py-14 border-t border-gray-200">
                 <div className="grid grid-cols-[auto_1fr] gap-6 sm:gap-10 items-start">
-                  <span className="display-md text-gray-200 dark:text-gray-800 tabular-nums pt-1">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
+                  <div className="flex items-center gap-2 pt-2 shrink-0">
+                    <span className="h-1.5 w-1.5 rounded-full chip-gold" />
+                    <span className="display-md text-gray-200 dark:text-gray-800 tabular-nums">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                  </div>
                   <div>
                     <h3 className="text-xl sm:text-2xl font-semibold text-foreground tracking-[-0.01em] leading-tight">
                       {feature.title}

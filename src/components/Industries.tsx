@@ -7,7 +7,11 @@ const Industries: React.FC = () => {
     <section className="relative py-24 sm:py-32">
       <div className="section-content px-6 sm:px-10 lg:px-16">
         <Reveal>
-          <p className="micro-label mb-6">Industries</p>
+          <div className="flex items-center gap-3 mb-6">
+            <span className="chip-gold rounded-full px-3 py-1 font-mono text-[9px] uppercase tracking-[2px]" style={{ color: "hsl(var(--gold-foreground))" }}>
+              Industries
+            </span>
+          </div>
           <h2 className="display-md text-foreground max-w-2xl mb-6">
             From fintech to food service — we build for your sector.
           </h2>

@@ -11,19 +11,19 @@ const TermsOfService: React.FC = () => {
       <div className="px-6 sm:px-10 lg:px-16 py-16 sm:py-24 max-w-5xl mx-auto">
         <Link
           to="/"
-          className="inline-flex items-center gap-2 micro-label hover:text-foreground transition-colors duration-200"
+          className="inline-flex items-center gap-2 micro-label text-primary-light hover:text-foreground transition-colors duration-200"
         >
           <ArrowUpLeft className="h-3.5 w-3.5" />
           Back
         </Link>
 
-        <p className="micro-label mt-12 mb-4">Legal</p>
+        <p className="micro-label text-primary-light mt-12 mb-4">Legal</p>
         <h1 className="display-lg text-foreground">
           Terms of
           <br />
           Service
         </h1>
-        <p className="mt-4 micro-label">
+        <p className="mt-4 micro-label text-primary-light">
           Last updated: September {new Date().getDate()}, {year}
         </p>
         <p className="mt-8 text-base leading-relaxed text-gray-500 max-w-xl">

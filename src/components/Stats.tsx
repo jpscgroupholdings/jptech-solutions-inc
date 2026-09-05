@@ -13,7 +13,7 @@ const Stats: React.FC = () => {
                 <p className="display-lg text-background">
                   {stat.value}
                 </p>
-                <p className="micro-label mt-3" style={{ color: "hsl(var(--gray-500))" }}>
+                <p className="micro-label mt-3">
                   {stat.label}
                 </p>
               </div>

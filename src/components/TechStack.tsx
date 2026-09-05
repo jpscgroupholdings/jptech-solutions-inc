@@ -7,7 +7,7 @@ const TechStack: React.FC = () => {
     <section className="py-24 sm:py-32">
       <div className="section-content px-6 sm:px-10 lg:px-16">
         <Reveal>
-          <p className="micro-label mb-6">Our Stack</p>
+          <p className="micro-label text-primary-light mb-6">Our Stack</p>
           <h2 className="display-md text-foreground max-w-2xl mb-14">
             Tools we trust.
           </h2>
@@ -17,7 +17,7 @@ const TechStack: React.FC = () => {
           {TECH_STACK.map((cat, i) => (
             <Reveal key={cat.category} delay={i * 70}>
               <div>
-                <p className="micro-label mb-4">{cat.category}</p>
+                <p className="micro-label text-primary-light mb-4">{cat.category}</p>
                 <ul className="space-y-2.5">
                   {cat.tools.map((tool) => (
                     <li

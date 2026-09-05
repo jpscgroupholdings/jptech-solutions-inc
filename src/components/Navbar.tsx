@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
             alt="JP Technology Solutions Inc."
             className="h-8 w-8 dark:invert"
           />
-          <span className="hidden sm:inline micro-label">JPTech</span>
+          <span className="hidden sm:inline micro-label text-primary-light">JPTech</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
             <a
               key={link.href}
               href={link.href}
-              className="micro-label hover:text-foreground transition-colors duration-200"
+              className="micro-label text-primary-light hover:text-foreground transition-colors duration-200"
             >
               {link.label}
             </a>
@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
           <ThemeToggle />
           <a
             href="#contact"
-            className="hidden md:inline-flex items-center rounded-full bg-foreground text-background px-5 py-2 micro-label hover:opacity-80 transition-opacity duration-200"
+            className="hidden md:inline-flex items-center rounded-xs bg-primary text-primary-foreground px-5 py-2 micro-label hover:bg-primary-dark transition-colors duration-200"
           >
             Let's Talk
           </a>

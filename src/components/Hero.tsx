@@ -17,19 +17,19 @@ const Hero: React.FC = () => {
 
       <div className="relative z-10 px-6 sm:px-10 lg:px-16">
         <div className="flex items-center gap-3 mb-8">
-          <span className="h-2 w-2 rounded-full bg-foreground animate-pulse-dot" />
-          <p className="micro-label">Available for new projects — Q4 2026</p>
+          <span className="h-2 w-2 rounded-full chip-gold animate-pulse-dot" />
+          <p className="micro-label text-primary-light">Available for new projects — Q4 2026</p>
         </div>
 
-        <h1 className="display-xl text-foreground">
+        <h1 className="display-xl text-primary">
           technology
           <br />
           that
-          <span className="text-gray-300 dark:text-gray-700"> works.</span>
+          <span className="text-gold-light"> works.</span>
         </h1>
 
         <div className="mt-12 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-8">
-          <p className="text-lg sm:text-xl text-gray-500 leading-relaxed max-w-lg">
+          <p className="text-lg sm:text-xl text-primary/60 leading-relaxed max-w-lg">
             Cloud, custom platforms, AI, and security — built end-to-end by one
             team that actually cares about your operations.
           </p>
@@ -37,34 +37,38 @@ const Hero: React.FC = () => {
           <div className="flex items-center gap-6 shrink-0">
             <a
               href="#contact"
-              className="inline-flex items-center rounded-full bg-foreground text-background px-6 py-3 micro-label hover:opacity-80 transition-opacity duration-200"
+              className="inline-flex items-center rounded-full bg-primary text-primary-foreground px-6 py-3 micro-label hover:opacity-90 transition-opacity duration-200"
             >
               Start a Project
             </a>
             <a
               href="#services"
-              className="micro-label text-gray-400 hover:text-foreground transition-colors duration-200 underline decoration-gray-200 underline-offset-4"
+              className="micro-label text-primary-light hover:text-gold transition-colors duration-200 underline decoration-gold-light hover:decoration-gold underline-offset-[3px]"
             >
               See what we do ↗
             </a>
           </div>
         </div>
 
-        <div className="mt-16 sm:mt-24 grid grid-cols-2 sm:grid-cols-4 gap-px bg-gray-200">
-          {STATS.map((stat) => (
+        <div className="mt-16 sm:mt-24 grid grid-cols-2 sm:grid-cols-4 gap-px bg-primary-light/60">
+          {STATS.map((stat, i) => (
             <div
               key={stat.label}
               className="bg-background py-5 sm:py-6 text-center"
             >
-              <p className="display-md text-foreground">{stat.value}</p>
-              <p className="micro-label mt-1">{stat.label}</p>
+              <p
+                className={`display-md text-primary`}
+              >
+                {stat.value}
+              </p>
+              <p className="micro-label text-primary-light mt-1">{stat.label}</p>
             </div>
           ))}
         </div>
 
         <div className="mt-10 flex items-center gap-3">
-          <div className="h-px w-16 bg-gray-200" />
-          <span className="micro-label">Scroll</span>
+          <div className="h-px w-16 bg-primary-light" />
+          <span className="micro-label text-primary-light">Scroll</span>
         </div>
       </div>
     </section>

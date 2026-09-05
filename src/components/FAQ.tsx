@@ -8,11 +8,11 @@ const FAQ: React.FC = () => {
     <section className="py-24 sm:py-40">
       <div className="section-content px-6 sm:px-10 lg:px-16">
         <Reveal>
-          <p className="micro-label mb-6">FAQ</p>
+          <p className="micro-label text-primary-light mb-6">FAQ</p>
           <h2 className="display-lg text-foreground mb-14">
             Common
             <br />
-            <span className="text-gray-300 dark:text-gray-700">questions.</span>
+            <span className="text-primary">questions.</span>
           </h2>
         </Reveal>
 

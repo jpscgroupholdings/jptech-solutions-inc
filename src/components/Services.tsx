@@ -7,11 +7,11 @@ const Services: React.FC = () => {
     <section id="services" className="relative py-24 sm:py-40">
       <div className="px-6 sm:px-10 lg:px-16">
         <Reveal>
-          <p className="micro-label mb-6">01 — Services</p>
+          <p className="micro-label text-primary-light mb-6">01 — Services</p>
           <h2 className="display-lg text-foreground max-w-4xl">
             Six practice areas.
             <br />
-            <span className="text-gray-300 dark:text-gray-700">
+            <span className="text-primary">
               One integrated team.
             </span>
           </h2>

@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
                 alt={COMPANY.name}
                 className="h-8 w-8 dark:invert"
               />
-              <span className="micro-label">{COMPANY.shortName}</span>
+              <span className="micro-label text-primary-light">{COMPANY.shortName}</span>
             </div>
             <p className="text-sm text-gray-500 max-w-sm leading-relaxed">
               Enterprise technology partner delivering cloud infrastructure,
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <p className="micro-label mb-4">Navigation</p>
+            <p className="micro-label text-primary-light mb-4">Navigation</p>
             <nav className="flex flex-col gap-3">
               {NAV_LINKS.map((link) => (
                 <a
@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <p className="micro-label mb-4">Contact</p>
+            <p className="micro-label text-primary-light mb-4">Contact</p>
             <div className="space-y-3 text-sm text-gray-500">
               <a
                 href={`mailto:${CONTACT.email}`}
@@ -78,17 +78,17 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="mt-14 pt-8 border-t border-gray-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <p className="micro-label">© {year} {COMPANY.name}. All rights reserved.</p>
+          <p className="micro-label text-primary-light">© {year} {COMPANY.name}. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link
               to="/privacy-policy"
-              className="micro-label hover:text-foreground transition-colors duration-200"
+              className="micro-label text-primary-light hover:text-foreground transition-colors duration-200"
             >
               Privacy Policy
             </Link>
             <Link
               to="/terms-of-service"
-              className="micro-label hover:text-foreground transition-colors duration-200"
+              className="micro-label text-primary-light hover:text-foreground transition-colors duration-200"
             >
               Terms of Service
             </Link>

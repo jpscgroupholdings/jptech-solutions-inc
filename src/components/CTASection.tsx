@@ -54,11 +54,11 @@ const CTASection: React.FC = () => {
     <section id="contact" className="relative py-24 sm:py-40">
       <div className="section-content px-6 sm:px-10 lg:px-16">
         <Reveal>
-          <p className="micro-label mb-6">04 — Contact</p>
+          <p className="micro-label text-primary-light mb-6">04 — Contact</p>
           <h2 className="display-lg text-foreground max-w-3xl">
             Let's build
             <br />
-            <span className="text-gray-300 dark:text-gray-700">something.</span>
+            <span className="text-primary">something.</span>
           </h2>
           <p className="mt-6 text-base text-gray-500 leading-relaxed max-w-xl">
             Book a free 30-minute consultation. We'll discuss your goals,
@@ -73,7 +73,7 @@ const CTASection: React.FC = () => {
               <div>
                 <div className="flex items-center gap-2.5 mb-3">
                   <Clock className="h-4 w-4 text-gray-400" />
-                  <p className="micro-label">Response Time</p>
+                  <p className="micro-label text-primary-light">Response Time</p>
                 </div>
                 <p className="text-base text-foreground">
                   Within 24 hours, guaranteed.
@@ -83,7 +83,7 @@ const CTASection: React.FC = () => {
               <div>
                 <div className="flex items-center gap-2.5 mb-3">
                   <MapPin className="h-4 w-4 text-gray-400" />
-                  <p className="micro-label">Office</p>
+                  <p className="micro-label text-primary-light">Office</p>
                 </div>
                 <p className="text-base text-foreground">{CONTACT.address}</p>
               </div>
@@ -91,7 +91,7 @@ const CTASection: React.FC = () => {
               <div>
                 <div className="flex items-center gap-2.5 mb-3">
                   <Phone className="h-4 w-4 text-gray-400" />
-                  <p className="micro-label">Direct</p>
+                  <p className="micro-label text-primary-light">Direct</p>
                 </div>
                 <a
                   href={`mailto:${CONTACT.email}`}
@@ -105,7 +105,7 @@ const CTASection: React.FC = () => {
               </div>
 
               <div className="pt-6 border-t border-gray-200">
-                <p className="micro-label mb-2">Hours</p>
+                <p className="micro-label text-primary-light mb-2">Hours</p>
                 <p className="text-sm text-gray-500">
                   Mon–Fri, 9:00am–6:00pm PHT
                 </p>
@@ -115,9 +115,12 @@ const CTASection: React.FC = () => {
               </div>
 
               <div className="p-5 rounded-lg border border-gray-200 bg-gray-50 dark:bg-gray-50">
-                <p className="font-mono text-[11px] uppercase tracking-[1px] text-gray-400 mb-2">
-                  Free Consultation
-                </p>
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="h-2 w-2 rounded-full chip-gold" />
+                  <p className="font-mono text-[11px] uppercase tracking-[1px] text-gray-400">
+                    Free Consultation
+                  </p>
+                </div>
                 <p className="text-sm text-foreground leading-relaxed">
                   30-minute discovery call. No commitment, no sales pitch — just
                   an honest conversation about what your business needs.
@@ -167,7 +170,7 @@ const CTASection: React.FC = () => {
                   placeholder="+63 912 345 6789"
                 />
                 <div>
-                  <label className="micro-label mb-3 block">Message</label>
+                  <label className="micro-label text-primary-light mb-3 block">Message</label>
                   <textarea
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
@@ -176,7 +179,7 @@ const CTASection: React.FC = () => {
                     className="w-full rounded-lg border border-gray-200 bg-gray-50 dark:bg-gray-50 px-4 py-3 text-sm text-foreground placeholder:text-gray-400 focus:border-gray-400 focus:outline-none transition-colors resize-none"
                   />
                 </div>
-                <label className="flex items-center gap-3 micro-label cursor-pointer">
+                <label className="flex items-center gap-3 micro-label text-primary-light cursor-pointer">
                   <input
                     type="checkbox"
                     checked={smsOptIn}
@@ -189,7 +192,7 @@ const CTASection: React.FC = () => {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="group w-full justify-center inline-flex items-center gap-3 rounded-full bg-foreground text-background px-8 py-3.5 micro-label hover:opacity-80 transition-opacity duration-200 disabled:opacity-50"
+                  className="group w-full justify-center inline-flex items-center gap-3 rounded-xs bg-primary text-primary-foreground px-8 py-3.5 micro-label hover:bg-primary-dark transition-colors duration-200 disabled:opacity-50"
                 >
                   {submitting ? "Sending..." : "Send Message"}
                   {!submitting && (
@@ -214,7 +217,7 @@ const Field: React.FC<{
   required?: boolean;
 }> = ({ label, value, onChange, type = "text", placeholder, required }) => (
   <div>
-    <label className="micro-label mb-3 block">{label}</label>
+    <label className="micro-label text-primary-light mb-3 block">{label}</label>
     <input
       type={type}
       value={value}

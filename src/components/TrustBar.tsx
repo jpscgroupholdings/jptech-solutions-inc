@@ -8,7 +8,7 @@ const TrustBar: React.FC = () => {
       <div className="section-content px-6 sm:px-10 lg:px-16">
         <Reveal>
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-10">
-            <span className="micro-label shrink-0">Trusted & Certified</span>
+            <span className="micro-label text-primary-light shrink-0">Trusted & Certified</span>
             <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
               {CERTIFICATIONS.map((cert) => (
                 <span
