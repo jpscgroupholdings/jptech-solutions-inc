@@ -219,7 +219,7 @@ const Process: React.FC = () => {
       id="process"
       ref={sectionRef}
       onMouseMove={handleMouseMove}
-      className="inverted relative py-24 sm:py-40 overflow-hidden"
+      className="gradient-inverted relative py-24 sm:py-40 overflow-hidden"
     >
       <FloatingSVGs />
 

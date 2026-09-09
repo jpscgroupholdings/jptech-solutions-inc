@@ -157,6 +157,131 @@
   }
 }
 
+/* ── Gradient utilities — Alibaba Cloud–style ambient gradients ────────── */
+
+/* Subtle full-section background wash: navy hint at top fading to transparent */
+.gradient-section {
+  background: linear-gradient(
+    180deg,
+    hsla(var(--primary), 0.04) 0%,
+    transparent 40%
+  );
+}
+
+/* Hero ambient: radial navy glow from top-right + faint gold warmth bottom-left */
+.gradient-hero {
+  background:
+    radial-gradient(
+      ellipse 80% 60% at 75% 10%,
+      hsla(var(--primary), 0.12) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 60% 50% at 15% 85%,
+      hsla(var(--gold), 0.06) 0%,
+      transparent 50%
+    );
+}
+
+/* Contact / CTA section: soft navy glow from bottom */
+.gradient-cta {
+  background:
+    radial-gradient(
+      ellipse 70% 50% at 50% 100%,
+      hsla(var(--primary), 0.07) 0%,
+      transparent 60%
+    );
+}
+
+/* Footer: subtle darkening gradient at top edge */
+.gradient-footer {
+  background: linear-gradient(
+    180deg,
+    hsla(var(--foreground), 0.02) 0%,
+    transparent 30%
+  );
+}
+
+/* Primary button gradient: navy → navy-dark */
+.btn-gradient-primary {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--primary)) 0%,
+    hsl(var(--primary-dark)) 100%
+  );
+}
+.btn-gradient-primary:hover {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--primary)) 10%,
+    hsl(var(--primary-dark)) 90%
+  );
+  filter: brightness(1.08);
+}
+
+/* Gold chip gradient: gold → gold-mid for depth */
+.chip-gold-gradient {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--gold)) 0%,
+    hsl(var(--gold-mid)) 100%
+  );
+  color: hsl(var(--gold-foreground));
+  border: none;
+}
+
+/* Service card hover gradient overlay */
+.gradient-card-hover {
+  background: linear-gradient(
+    160deg,
+    hsla(var(--primary), 0.03) 0%,
+    hsla(var(--gold), 0.02) 100%
+  );
+}
+
+/* Inverted section gradient: dark foreground with a navy-to-charcoal wash */
+.gradient-inverted {
+  background: linear-gradient(
+    160deg,
+    hsl(var(--foreground)) 0%,
+    hsl(224 43% 12%) 50%,
+    hsl(226 48% 8%) 100%
+  );
+  color: hsl(var(--background));
+}
+
+/* Stats bar: subtle gradient glow behind stat values */
+.gradient-stats {
+  background:
+    linear-gradient(
+      90deg,
+      hsla(var(--primary), 0.04) 0%,
+      hsla(var(--primary), 0.08) 50%,
+      hsla(var(--primary), 0.04) 100%
+    );
+}
+
+/* Ambient orb helper — place behind content for soft glow */
+.gradient-orb-navy {
+  background: radial-gradient(
+    circle,
+    hsla(var(--primary), 0.10) 0%,
+    hsla(var(--primary), 0.03) 45%,
+    transparent 70%
+  );
+  filter: blur(60px);
+}
+
+.gradient-orb-gold {
+  background: radial-gradient(
+    circle,
+    hsla(var(--gold), 0.08) 0%,
+    hsla(var(--gold), 0.02) 45%,
+    transparent 70%
+  );
+  filter: blur(50px);
+}
+
 /* Halftone dot field — stays ink-colored (never gold/navy) so the accents
    keep their power. See jptech-minimal-design.md, Texture. */
 .halftone {

@@ -13,7 +13,7 @@ const SOCIAL_ICONS: Record<string, React.FC<{ className?: string }>> = {
 const Footer: React.FC = () => {
   const year = new Date().getFullYear();
   return (
-    <footer className="border-t border-gray-200 py-16 sm:py-20">
+    <footer className="border-t border-gray-200 py-16 sm:py-20 gradient-footer">
       <div className="section-content px-6 sm:px-10 lg:px-16">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">

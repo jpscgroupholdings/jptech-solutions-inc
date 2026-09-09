@@ -5,11 +5,11 @@ import ConstellationDecor from "./ConstellationDecor";
 
 const WhyChooseUs: React.FC = () => {
   return (
-    <section id="why-us" className="relative py-24 sm:py-40">
+    <section id="why-us" className="relative py-24 sm:py-40 gradient-section">
       <div className="section-content px-6 sm:px-10 lg:px-16">
         <Reveal>
           <div className="flex items-center gap-3 mb-6">
-            <span className="chip-gold rounded-full px-3 py-1 font-mono text-[9px] uppercase tracking-[2px]" style={{ color: "hsl(var(--gold-foreground))" }}>
+            <span className="chip-gold-gradient rounded-full px-3 py-1 font-mono text-[9px] uppercase tracking-[2px]" style={{ color: "hsl(var(--gold-foreground))" }}>
               02 — Why JP Technology
             </span>
           </div>

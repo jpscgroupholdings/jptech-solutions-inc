@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 
 const Services: React.FC = () => {
   return (
-    <section id="services" className="relative py-24 sm:py-40">
+    <section id="services" className="relative py-24 sm:py-40 gradient-section">
       <div className="px-6 sm:px-10 lg:px-16">
         <Reveal>
           <p className="micro-label text-primary-light mb-6">01 — Services</p>
@@ -25,7 +25,7 @@ const Services: React.FC = () => {
         <div className="mt-20 sm:mt-28 grid gap-px bg-gray-200 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((service, i) => (
             <Reveal key={service.id} delay={i * 70}>
-              <div className="group bg-background h-full p-8 sm:p-10 min-h-[300px] flex flex-col justify-between transition-colors duration-200 hover:bg-gray-50 dark:hover:bg-gray-50">
+              <div className="group bg-background h-full p-8 sm:p-10 min-h-[300px] flex flex-col justify-between transition-all duration-300 hover:bg-gray-50 dark:hover:bg-gray-50 hover:gradient-card-hover">
                 <div>
                   <span className="font-mono text-[11px] uppercase tracking-[2px] text-gray-400">
                     {String(i + 1).padStart(2, "0")}

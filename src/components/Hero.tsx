@@ -9,6 +9,35 @@ const Hero: React.FC = () => {
       id="top"
       className="relative min-h-screen flex flex-col justify-end pt-36 pb-16 sm:pb-24 overflow-hidden"
     >
+      {/* Mesh gradient blobs — hero */}
+      <div
+        className="absolute -top-20 -right-20 w-[500px] h-[500px] rounded-full animate-blob-slow"
+        style={{
+          background: "hsla(218, 95%, 32%, 0.25)",
+          filter: "blur(80px)",
+        }}
+      />
+      <div
+        className="absolute bottom-[20%] -left-32 w-[400px] h-[400px] rounded-full animate-blob-medium"
+        style={{
+          background: "hsla(40, 70%, 44%, 0.18)",
+          filter: "blur(70px)",
+        }}
+      />
+      <div
+        className="absolute top-[30%] right-[20%] w-[300px] h-[300px] rounded-full animate-blob-fast"
+        style={{
+          background: "hsla(219, 96%, 22%, 0.12)",
+          filter: "blur(60px)",
+        }}
+      />
+
+      {/* Edge gradient vignette */}
+      <div className="absolute inset-0 bg-gradient-edges pointer-events-none" />
+
+      {/* Ambient gradient wash */}
+      <div className="absolute inset-0 gradient-hero pointer-events-none" />
+
       <div className="absolute inset-0">
         <ConstellationArt />
       </div>
@@ -24,10 +53,10 @@ const Hero: React.FC = () => {
         </div>
 
         <h1 className="display-xl text-primary">
-          let's build
+          <span className="text-gradient-brand">let's build</span>
           <br />
           what's
-          <span className="text-gold-light"> next.</span>
+          <span className="text-gradient-brand"> next.</span>
         </h1>
 
         <div className="mt-12 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-8">
@@ -37,10 +66,10 @@ const Hero: React.FC = () => {
             better digital experiences.
           </p>
 
-          <div className="flex items-center gap-6 shrink-0">
+          <div className="flex items-center gap-6 shrink">
             <a
               href="#contact"
-              className="inline-flex items-center rounded-full bg-primary text-primary-foreground px-6 py-3 micro-label hover:opacity-90 transition-opacity duration-200"
+              className="inline-flex items-center rounded-full btn-gradient-primary text-primary-foreground px-6 py-3 micro-label transition-all duration-200"
             >
               Talk to Our Team
             </a>

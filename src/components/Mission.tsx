@@ -139,7 +139,7 @@ const Mission: React.FC = () => {
               <div className="flex flex-col items-center gap-6">
                 <a
                   href="#contact"
-                  className="group inline-flex items-center gap-3 chip-gold rounded-full px-7 py-3.5 micro-label text-primary-foreground w-fit hover:shadow-[0_0_24px_hsla(var(--gold),0.3)] transition-all duration-300"
+                  className="group inline-flex items-center gap-3 chip-gold-gradient rounded-full px-7 py-3.5 micro-label text-primary-foreground w-fit hover:shadow-[0_0_24px_hsla(var(--gold),0.3)] transition-all duration-300"
                 >
                   Talk to Our Technology Team
                   <span className="inline-flex items-center justify-center h-5 w-5 rounded-full bg-[hsl(var(--gold-foreground)/0.15)] group-hover:bg-[hsl(var(--gold-foreground)/0.25)] transition-colors duration-300">

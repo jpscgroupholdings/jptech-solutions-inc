@@ -51,14 +51,16 @@ const CTASection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="relative py-24 sm:py-40">
-      <div className="section-content px-6 sm:px-10 lg:px-16">
+    <section id="contact" className="relative py-24 sm:py-40 gradient-cta overflow-hidden">
+      {/* Ambient glow */}
+      <div className="absolute bottom-0 right-[10%] w-[400px] h-[400px] rounded-full gradient-orb-navy pointer-events-none" />
+      <div className="section-content px-6 sm:px-10 lg:px-16 relative z-10">
         <Reveal>
           <p className="micro-label text-primary-light mb-6">04 — Contact</p>
           <h2 className="display-lg text-foreground max-w-3xl">
             Let's build
             <br />
-            <span className="text-primary">what's next.</span>
+            <span className="text-gradient-brand">what's next.</span>
           </h2>
           <p className="mt-6 text-base text-gray-500 leading-relaxed max-w-xl">
             Whether you need a new business system, website, HRIS, cloud
@@ -192,7 +194,7 @@ const CTASection: React.FC = () => {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="group w-full justify-center inline-flex items-center gap-3 rounded-xs bg-primary text-primary-foreground px-8 py-3.5 micro-label hover:bg-primary-dark transition-colors duration-200 disabled:opacity-50"
+                  className="group w-full justify-center inline-flex items-center gap-3 rounded-xs btn-gradient-primary text-primary-foreground px-8 py-3.5 micro-label transition-all duration-200 disabled:opacity-50"
                 >
                   {submitting ? "Sending..." : "Send Message"}
                   {!submitting && (

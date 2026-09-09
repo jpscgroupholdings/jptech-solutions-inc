@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 import animate from "tailwindcss-animate";
 import typography from "@tailwindcss/typography";
+import plugin from "tailwindcss/plugin";
 
 export default {
   darkMode: ["class"],
@@ -165,5 +166,39 @@ export default {
       },
     },
   },
-  plugins: [animate, typography],
+  plugins: [
+    animate,
+    typography,
+    plugin(function ({ addUtilities, theme }) {
+      addUtilities({
+        ".text-gradient-brand": {
+          background: `linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary)) 40%, hsl(var(--gold)) 100%)`,
+          "-webkit-background-clip": "text",
+          "background-clip": "text",
+          "-webkit-text-fill-color": "transparent",
+        },
+        ".text-gradient-gold": {
+          background: `linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-mid)) 100%)`,
+          "-webkit-background-clip": "text",
+          "background-clip": "text",
+          "-webkit-text-fill-color": "transparent",
+        },
+        ".text-gradient-navy": {
+          background: `linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-dark)) 100%)`,
+          "-webkit-background-clip": "text",
+          "background-clip": "text",
+          "-webkit-text-fill-color": "transparent",
+        },
+        ".bg-gradient-brand": {
+          background: `linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary)) 40%, hsl(var(--gold)) 100%)`,
+        },
+        ".bg-gradient-navy": {
+          background: `linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-dark)) 100%)`,
+        },
+        ".bg-gradient-gold": {
+          background: `linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-mid)) 100%)`,
+        },
+      });
+    }),
+  ],
 } satisfies Config;

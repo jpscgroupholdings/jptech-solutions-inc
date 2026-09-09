@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <header className={`fixed top-0 inset-x-0 z-50 bg-background`}>
+    <header className={`fixed top-0 inset-x-0 z-50 ${scrolled ? "bg-background" : "bg-transparent"}`}>
       <nav className="mx-auto flex items-center justify-between px-6 sm:px-10 lg:px-16">
         <a href="#top" aria-label="Home" className="flex items-center">
           <img
@@ -38,11 +38,11 @@ const Navbar: React.FC = () => {
           ))}
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 ">
           <ThemeToggle />
           <a
             href="#contact"
-            className="hidden md:inline-flex items-center rounded-xs bg-primary text-primary-foreground px-5 py-2.5 micro-label hover:bg-primary-dark transition-colors duration-200"
+            className="hidden md:inline-flex items-center rounded-xs btn-gradient-primary text-primary-foreground px-5 py-2.5 micro-label transition-all duration-200"
           >
             Let's Talk
           </a>
@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
               <a
                 href="#contact"
                 onClick={() => setOpen(false)}
-                className="inline-flex items-center justify-center rounded-xs bg-primary text-primary-foreground px-8 py-3 micro-label hover:bg-primary-dark transition-colors duration-200"
+                className="inline-flex items-center justify-center rounded-xs btn-gradient-primary text-primary-foreground px-8 py-3 micro-label transition-all duration-200"
               >
                 Let's Talk
               </a>
