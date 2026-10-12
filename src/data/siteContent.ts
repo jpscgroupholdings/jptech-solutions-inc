@@ -377,18 +377,18 @@ export interface Partner {
 }
 
 export const PARTNERS: Partner[] = [
-  {
-    name: "Alibaba Cloud",
-    description:
-      "Cloud computing, infrastructure, database, security, and AI services.",
-    img: "/alibaba.png"
-  },
-  {
-    name: "Amazon Web Services (AWS)",
-    description:
-      "Flexible and scalable cloud infrastructure and application services.",
-      img: "/aws_logo.png"
-  },
+  // {
+  //   name: "Alibaba Cloud",
+  //   description:
+  //     "Cloud computing, infrastructure, database, security, and AI services.",
+  //   img: "/alibaba.png"
+  // },
+  // {
+  //   name: "Amazon Web Services (AWS)",
+  //   description:
+  //     "Flexible and scalable cloud infrastructure and application services.",
+  //     img: "/aws_logo.png"
+  // },
   {
     name: "ByteDance / BytePlus",
     description:
