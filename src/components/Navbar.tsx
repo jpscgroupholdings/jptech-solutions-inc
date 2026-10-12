@@ -16,14 +16,14 @@ const Navbar: React.FC = () => {
 
   return (
     <header className={`fixed top-0 inset-x-0 z-50 ${scrolled ? "bg-background" : "bg-transparent"}`}>
-      <nav className="mx-auto flex items-center justify-between px-6 sm:px-10 lg:px-16">
-        <a href="#top" aria-label="Home" className="flex items-center">
+      <nav className="mx-auto flex items-center justify-between px-6 sm:px-10 lg:px-16 py-3">
+        <a href="#top" aria-label="Home" className="flex flex-col items-center">
           <img
-            src="/jptechlogo-nobg.png"
+            src="/logo_notitle.png"
             alt="JP Technology Solutions Inc."
-            className={`dark:invert transition-all duration-500 ease-out h-24 w-24
-            `}
+            className="dark:invert transition-all duration-500 ease-out h-16 w-auto"
           />
+          <span className="text-[0.55rem] font-semibold uppercase text-primary">JP Technology Solutions Inc.</span>
         </a>
 
         <div className="hidden md:flex items-center gap-10">

@@ -373,6 +373,7 @@ export const CERTIFICATIONS: string[] = [
 export interface Partner {
   name: string;
   description: string;
+  img?: string
 }
 
 export const PARTNERS: Partner[] = [
@@ -380,21 +381,25 @@ export const PARTNERS: Partner[] = [
     name: "Alibaba Cloud",
     description:
       "Cloud computing, infrastructure, database, security, and AI services.",
+    img: "/alibaba.png"
   },
   {
     name: "Amazon Web Services (AWS)",
     description:
       "Flexible and scalable cloud infrastructure and application services.",
+      img: "/aws_logo.png"
   },
   {
-    name: "ByteDance / TikTok",
+    name: "ByteDance / BytePlus",
     description:
       "Technology and digital ecosystem solutions supporting AI, data, marketing, and customer engagement initiatives.",
+      img: "/bytedance.png"
   },
   {
     name: "Digital One Solutions",
     description:
       "Our technology and cloud services foundation, supporting enterprise cloud solutions and digital transformation.",
+      img: "/dgone-nobg.png"
   },
 ];
 
