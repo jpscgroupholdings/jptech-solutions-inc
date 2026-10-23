@@ -21,7 +21,7 @@ const Partners: React.FC = () => {
           {PARTNERS.map((partner, i) => (
             <Reveal key={partner.name} delay={i * 70}>
               <div className="group bg-background flex items-center gap-6 p-8 sm:p-10 transition-colors duration-200 hover:bg-gray-50 dark:hover:bg-gray-50">
-                <div className="w-28 shrink-0 flex items-center">
+                <div className="w-36 shrink-0 flex items-center">
                   <img
                     src={partner.img}
                     alt={partner.name}

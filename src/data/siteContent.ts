@@ -399,7 +399,7 @@ export const PARTNERS: Partner[] = [
     name: "Digital One Solutions",
     description:
       "Our technology and cloud services foundation, supporting enterprise cloud solutions and digital transformation.",
-      img: "/dgone-nobg.png"
+      img: "/new-dgone.png"
   },
 ];
 
