@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
   return (
     <header className={`fixed top-0 inset-x-0 z-50 ${scrolled ? "bg-background" : "bg-transparent"}`}>
       <nav className="mx-auto flex items-center justify-between px-6 sm:px-10 lg:px-16 py-3">
-        <a href="#top" aria-label="Home" className="flex flex-col items-center">
+        <a href="/" aria-label="Home" className="flex flex-col items-center">
           <img
             src="/logo_notitle.png"
             alt="JP Technology Solutions Inc."
