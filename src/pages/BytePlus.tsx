@@ -79,7 +79,7 @@ const BytePlus: React.FC = () => {
 
       <main className="relative z-10">
         {/* ── Hero ── */}
-        <section className="relative pt-36 pb-20 sm:pt-44 sm:pb-28 overflow-hidden">
+        <section className="relative pt-32 pb-16 sm:pt-44 sm:pb-28 overflow-hidden">
           <HalftoneField fade="bottom" className="opacity-20" />
 
           <div className="section-content px-6 sm:px-10 lg:px-16">
@@ -91,7 +91,7 @@ const BytePlus: React.FC = () => {
                 </p>
               </div>
 
-              <h1 className="display-lg text-foreground max-w-4xl">
+              <h1 className="text-2xl sm:text-[clamp(2rem,5vw,3.5rem)] font-mono tracking-[-0.02em] leading-[1.1] text-foreground max-w-3xl">
                 Powering Business Growth
                 <br />
                 <span className="text-gradient-brand">
@@ -99,16 +99,16 @@ const BytePlus: React.FC = () => {
                 </span>
               </h1>
 
-              <p className="mt-8 text-lg text-gray-500 leading-relaxed max-w-2xl">
+              <p className="mt-6 sm:mt-8 text-sm sm:text-base text-gray-500 leading-relaxed max-w-xl">
                 Advanced AI. Smarter Marketing. Intelligent Business Solutions.
               </p>
             </Reveal>
 
             <Reveal delay={100}>
-              <div className="mt-10 flex items-center gap-6">
+              <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-4 sm:gap-6">
                 <a
                   href="#contact-byteplus"
-                  className="inline-flex items-center rounded-xs btn-gradient-primary text-primary-foreground px-6 py-3 micro-label transition-all duration-200"
+                  className="inline-flex items-center rounded-xs btn-gradient-primary text-primary-foreground px-5 sm:px-6 py-2.5 sm:py-3 micro-label transition-all duration-200"
                 >
                   Get Started
                 </a>
@@ -124,18 +124,18 @@ const BytePlus: React.FC = () => {
         </section>
 
         {/* ── About ── */}
-        <section className="py-20 sm:py-28 gradient-section">
+        <section className="py-16 sm:py-28 gradient-section">
           <div className="section-narrow px-6 sm:px-10 lg:px-16">
             <Reveal>
-              <p className="micro-label text-primary-light mb-6" style={{ fontSize: "12px"}}>
+              <p className="micro-label text-primary-light mb-4 sm:mb-6">
                 01 — About BytePlus
               </p>
-              <h2 className="display-md text-foreground">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-mono tracking-[-0.02em] leading-[1.1] text-foreground">
                 Enterprise technology built on
                 <br />
                 <span className="text-primary">ByteDance's expertise.</span>
               </h2>
-              <p className="mt-6 text-base text-gray-500 leading-relaxed">
+              <p className="mt-4 sm:mt-6 text-sm sm:text-base text-gray-500 leading-relaxed">
                 BytePlus is the enterprise technology arm built on ByteDance's
                 advanced technology and engineering expertise. It provides
                 businesses with innovative AI, cloud computing, data analytics,
@@ -143,7 +143,7 @@ const BytePlus: React.FC = () => {
                 customer experiences, improve operational efficiency, and
                 accelerate business growth.
               </p>
-              <p className="mt-4 text-base text-gray-500 leading-relaxed">
+              <p className="mt-3 sm:mt-4 text-sm sm:text-base text-gray-500 leading-relaxed">
                 Through technologies developed from ByteDance's experience
                 powering globally recognized digital platforms, BytePlus helps
                 organizations transform the way they engage customers, manage
@@ -154,30 +154,30 @@ const BytePlus: React.FC = () => {
         </section>
 
         {/* ── Solutions ── */}
-        <section className="py-20 sm:py-28">
+        <section className="py-16 sm:py-28">
           <div className="section-content px-6 sm:px-10 lg:px-16">
             <Reveal>
-              <p className="micro-label text-primary-light mb-6" style={{ fontSize: "12px"}}>
+              <p className="micro-label text-primary-light mb-4 sm:mb-6">
                 02 — Our BytePlus Solutions
               </p>
-              <h2 className="display-md text-foreground max-w-3xl">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-mono tracking-[-0.02em] leading-[1.1] text-foreground max-w-3xl">
                 AI-native cloud for
                 <br />
                 <span className="text-primary">enterprise growth.</span>
               </h2>
             </Reveal>
 
-            <div className="mt-16 sm:mt-20 grid gap-px bg-white sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-12 sm:mt-20 grid gap-px bg-gray-200 sm:grid-cols-2 lg:grid-cols-3">
               {SOLUTIONS.map((solution, i) => (
                 <Reveal key={solution.id} delay={i * 70}>
-                  <div className="group bg-background h-full p-8 sm:p-10 min-h-[260px] flex flex-col transition-all duration-300 hover:bg-gray-50 dark:hover:bg-gray-50 hover:gradient-card-hover">
-                    <span className="font-mono text-[11px] uppercase tracking-[2px] text-gray-400">
+                  <div className="group bg-background h-full p-6 sm:p-10 min-h-[220px] sm:min-h-[260px] flex flex-col transition-all duration-300 hover:bg-gray-50 dark:hover:bg-gray-50 hover:gradient-card-hover">
+                    <span className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[2px] text-gray-400">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <h3 className="mt-4 text-xl sm:text-2xl font-semibold text-foreground tracking-[-0.02em]">
+                    <h3 className="mt-3 sm:mt-4 text-lg sm:text-xl md:text-2xl font-semibold text-foreground tracking-[-0.02em]">
                       {solution.title}
                     </h3>
-                    <p className="mt-4 text-sm leading-relaxed text-gray-500">
+                    <p className="mt-3 sm:mt-4 text-xs sm:text-sm leading-relaxed text-gray-500">
                       {solution.description}
                     </p>
                   </div>
@@ -188,13 +188,13 @@ const BytePlus: React.FC = () => {
         </section>
 
         {/* ── Why BytePlus ── */}
-        <section className="py-20 sm:py-28 gradient-section">
+        <section className="py-16 sm:py-28 gradient-section">
           <div className="section-content px-6 sm:px-10 lg:px-16">
             <Reveal>
-              <p className="micro-label text-primary-light mb-6" style={{ fontSize: "12px"}}>
+              <p className="micro-label text-primary-light mb-4 sm:mb-6">
                 03 — Why BytePlus?
               </p>
-              <h2 className="display-md text-foreground mb-12">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-mono tracking-[-0.02em] leading-[1.1] text-foreground mb-8 sm:mb-12">
                 Technology that scales
                 <br />
                 <span className="text-primary">with your ambition.</span>
@@ -204,9 +204,9 @@ const BytePlus: React.FC = () => {
             <div className="space-y-0">
               {WHY_ITEMS.map((item, i) => (
                 <Reveal key={i} delay={i * 70}>
-                  <div className="flex items-start gap-4 py-5 border-b border-gray-200 last:border-0">
-                    <Check className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                    <p className="text-sm sm:text-base text-gray-500 leading-relaxed">
+                  <div className="flex items-start gap-3 sm:gap-4 py-4 sm:py-5 border-b border-gray-200 last:border-0">
+                    <Check className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary shrink-0 mt-0.5" />
+                    <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed">
                       {item}
                     </p>
                   </div>
@@ -217,18 +217,18 @@ const BytePlus: React.FC = () => {
         </section>
 
         {/* ── Partner section ── */}
-        <section className="py-20 sm:py-28">
+        <section className="py-16 sm:py-28">
           <div className="section-content px-6 sm:px-10 lg:px-16">
             <Reveal>
-              <p className="micro-label text-primary-light mb-6" style={{ fontSize: "12px"}}>
+              <p className="micro-label text-primary-light mb-4 sm:mb-6">
                 04 — Your Technology Partner
               </p>
-              <h2 className="display-md text-foreground mb-6">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-mono tracking-[-0.02em] leading-[1.1] text-foreground mb-4 sm:mb-6">
                 JP Technology Solutions —
                 <br />
                 <span className="text-primary">Your BytePlus Partner.</span>
               </h2>
-              <p className="text-base text-gray-500 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-500 leading-relaxed">
                 Through our partnership with BytePlus, JP Technology Solutions
                 Inc. helps Philippine businesses explore, adopt, and implement
                 advanced AI and digital technologies. From AI-powered marketing
@@ -243,31 +243,31 @@ const BytePlus: React.FC = () => {
         {/* ── CTA ── */}
         <section
           id="contact-byteplus"
-          className="py-20 sm:py-28 gradient-cta overflow-hidden"
+          className="py-16 sm:py-28 gradient-cta overflow-hidden"
         >
           <div className="absolute bottom-0 right-[10%] w-[350px] h-[350px] rounded-full gradient-orb-navy pointer-events-none" />
 
           <div className="section-content px-6 sm:px-10 lg:px-16 relative z-10">
             <Reveal>
-              <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-center gap-3 mb-4 sm:mb-6">
                 <span className="h-2 w-2 rounded-full chip-gold animate-pulse-dot" />
-                <p className="micro-label text-primary-light" style={{ fontSize: "12px"}}>Get Started</p>
+                <p className="micro-label text-primary-light">Get Started</p>
               </div>
-              <h2 className="display-md text-foreground">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-mono tracking-[-0.02em] leading-[1.1] text-foreground">
                 Ready to Transform Your
                 <br />
                 <span className="text-gradient-brand">Business with AI?</span>
               </h2>
-              <p className="mt-6 text-base text-gray-500 leading-relaxed max-w-xl">
+              <p className="mt-4 sm:mt-6 text-sm sm:text-base text-gray-500 leading-relaxed max-w-xl">
                 Discover how BytePlus technologies can help your business
                 innovate, operate smarter, and grow faster. Let's build what's
                 next. Contact JP Technology Solutions Inc. today.
               </p>
 
-              <div className="mt-10">
+              <div className="mt-8 sm:mt-10">
                 <a
                   href="/#contact"
-                  className="inline-flex items-center gap-2 rounded-xs btn-gradient-primary text-primary-foreground px-8 py-3.5 micro-label transition-all duration-200 group"
+                  className="inline-flex items-center gap-2 rounded-xs btn-gradient-primary text-primary-foreground px-6 sm:px-8 py-3 sm:py-3.5 micro-label transition-all duration-200 group"
                 >
                   Contact Us Today
                   <ArrowUpRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
