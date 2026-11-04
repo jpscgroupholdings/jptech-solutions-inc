@@ -79,6 +79,12 @@ const Lark: React.FC = () => {
 
           <div className="section-content px-6 sm:px-10 lg:px-16">
             <Reveal>
+              <img
+                src="/larkxd1.png"
+                alt="Lark × Digital One Solutions"
+                className="h-14 sm:h-18 w-auto mb-6"
+              />
+
               <div className="flex items-center gap-3 mb-6">
                 <span className="h-2 w-2 rounded-full chip-gold animate-pulse-dot" />
                 <p className="micro-label text-primary-light">

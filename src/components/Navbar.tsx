@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
         </div>
 
         <div className="flex items-center gap-4 ">
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <a
             href="#contact"
             className="hidden md:inline-flex items-center rounded-xs btn-gradient-primary text-primary-foreground px-5 py-2.5 micro-label transition-all duration-200"
