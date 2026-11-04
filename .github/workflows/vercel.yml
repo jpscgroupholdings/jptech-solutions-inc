@@ -1,4 +1,4 @@
-name: Deploy to Vercel
+name: Deploy to ECS
 
 on:
   push:
@@ -6,16 +6,29 @@ on:
       - main
 
 jobs:
-  build_and_deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      - name: Install Vercel CLI
-        run: npm install -g vercel@latest
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.ECS_HOST }}
+          username: ${{ secrets.ECS_USERS }}
+          key: ${{ secrets.ECS_SSH_KEY }}
+          port: ${{ secrets.ECS_PORT }}
+          script: |
+            set -e
+            cd /var/www/jptech-solutions-inc
+            git pull origin main
+            npm ci --production=false
+            if ! npm run build; then
+              echo "Build failed — old version stays alive"
+              exit 1
+            fi
+            echo "Deploy complete: $(date)"
 
-      - name: Deploy to Vercel
-        run: vercel deploy --prod --token=${{ secrets.VERCEL_TOKEN }}
-        env:
-          VERCEL_ORG_ID: ${{ secrets.ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.PROJECT_ID }}
+
+       
