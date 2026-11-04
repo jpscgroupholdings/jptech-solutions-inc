@@ -8,6 +8,8 @@ import Index from "./pages/Index";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
+import BytePlus from "./pages/BytePlus";
+import Lark from "./pages/Lark";
 
 const queryClient = new QueryClient();
 
@@ -20,9 +22,11 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="*" element={<NotFound />} />
+            <Route path="/byteplus" element={<BytePlus />} />
+            <Route path="/lark" element={<Lark />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
-            <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
